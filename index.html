@@ -213,8 +213,8 @@
     <figure class="hero-media">
       <div class="frame">
         <img src="assets/img/hero-1600.webp" srcset="assets/img/hero-1000.webp 1000w, assets/img/hero-1600.webp 1600w, assets/img/hero-2400.webp 2400w" sizes="(min-width: 1160px) 1120px, 100vw" width="2400" height="1200" alt="Two FR3 robot arms hold laparoscopic instruments through trocars in an anesthetized rabbit while the surgeon supervises at a console in the operating room" fetchpriority="high" decoding="async">
-        <figcaption class="tag"><b>In-vivo deployment, 4 September 2026.</b> Two FR3 arms hold the grasper and dissector through trocars in an anesthetized rabbit. The surgeon supervises at the console and can take control back at any moment.</figcaption>
       </div>
+      <figcaption class="tag"><b>In-vivo deployment, 4 September 2026.</b> Two FR3 arms hold the grasper and dissector through trocars in an anesthetized rabbit. The surgeon supervises at the console and can take control back at any moment.</figcaption>
     </figure>
 
     <div class="stats" role="list">
@@ -387,7 +387,12 @@
         <p>In this setting offline error is not merely uninformative about closed-loop success. It is anti-correlated with safety.</p>
       </div>
       <aside class="aside">
-        <div class="chart reveal">
+        <div class="note"><b>Selection criterion.</b> A policy that does nothing never violates the trocar, so violations alone cannot select a configuration; GR00T-H and the frozen backbone score well on it for that reason. The criterion was therefore the full approach without a violation: lift, arrive at the site and close the jaw on tissue, the furthest stage the simulator can score.</div>
+        <div class="note note--energy"><b>Cost of the choice.</b> Unfreezing one block raises simulated trocar violations from 6% to 19% (p = 0.6), a cost that did not materialize on the real rig or in vivo.</div>
+      </aside>
+    </div>
+
+    <div class="chart reveal">
           <h4>Unfreezing sweep: offline error improves while safety degrades</h4>
           <div class="panels">
             <svg id="chart-mae" role="img" aria-label="Validation MAE falls from 0.152 to 0.142 as zero to four DINOv3 blocks are unfrozen"></svg>
@@ -395,8 +400,6 @@
           </div>
           <div class="legend"><span><i></i>Configuration in the sweep</span><span><i class="energy"></i>Deployed: one block unfrozen</span></div>
           <p class="foot">Table II values. 16 closed-loop episodes of 15 s per configuration; violations are episodes with a trocar excursion above 10 mm.</p>
-        </div>
-      </aside>
     </div>
 
     <figure class="fig fig--wide reveal">
@@ -514,9 +517,13 @@
         <p>Across all policy-controlled time that day the RCM error never exceeded 0.84 mm against a 5 mm abort threshold, and every sample that did exceed the threshold in the day's logs occurred under human teleoperation. In every sample of cautery under policy control, 108 samples at 10 Hz, the cutting jaw was closed, with aperture at most 0.7%.</p>
       </div>
       <aside class="aside">
-        <div class="tbl reveal" style="margin-top:0">
-          <table style="min-width:0">
-            <thead><tr><th></th><th class="n">R1</th><th class="n">R2</th><th class="n">R3</th><th class="n">R4</th></tr></thead>
+        <div class="note"><b>Acceptance gates, pre-registered.</b> Every jaw-closing event detected. Energy false-fire 0.019 against a gate of 0.05. Missed-fire 0.032 against 0.30. Closed-loop gain 0.86 and 0.82 for the two arms against 0.8. Scored on unseen episodes before any animal was touched.</div>
+        <div class="note note--energy"><b>Under policy control.</b> 108 cautery samples at 10 Hz, cutting jaw closed in every one, aperture at most 0.7%. Peak RCM error 0.84 mm against a 5 mm abort threshold.</div>
+      </aside>
+    </div>
+    <div class="tbl reveal">
+          <table>
+            <thead><tr><th></th><th class="n">Rabbit 1</th><th class="n">Rabbit 2</th><th class="n">Rabbit 3</th><th class="n">Rabbit 4</th></tr></thead>
             <tbody>
               <tr><td>Appendectomy completed</td><td class="n yes">yes</td><td class="n yes">yes</td><td class="n yes">yes</td><td class="n no">no‡</td></tr>
               <tr><td>Policy control time (s)</td><td class="n">34.2</td><td class="n">16.8</td><td class="n">14.7</td><td class="n">—</td></tr>
@@ -527,9 +534,8 @@
             </tbody>
           </table>
         </div>
-        <p class="tbl-cap" style="margin-top:.2rem"><b>Table III</b> Deployment results on four live rabbits. One rollout per animal; every value is from that rollout's log. ‡ Aborted at hand-over by the joint-limit governor (controller, not policy). Completed by hand.</p>
-      </aside>
-    </div>
+        <p class="tbl-cap"><b>Table III</b> Deployment results on four live rabbits. One rollout per animal; every value is from that rollout's log. ‡ Aborted at hand-over by the joint-limit governor (controller, not policy). Completed by hand.</p>
+
     <figure class="fig fig--wide reveal">
       <div class="media"><img src="assets/img/fig7-invivo-2400.webp" srcset="assets/img/fig7-invivo-1200.webp 1200w, assets/img/fig7-invivo-2400.webp 2400w" sizes="(min-width: 1400px) 1320px, 100vw" width="2400" height="1001" loading="lazy" decoding="async" alt="In-vivo demonstration collection, deployment with two FR3 arms, and a strip of endoscope frames from rabbit 1's rollout ending in the energized cut"></div>
       <figcaption><b>Fig. 7</b> In-vivo demonstration collection and deployment. (a) The surgeon operates on a live rabbit with instruments carrying the in-vivo logger. (b) Deployment on a different animal: two FR3 arms hold the grasper and dissector through trocars in the anesthetized rabbit with the electrosurgical unit connected. The surgeon supervises at the console. (c) Frames from rabbit 1's 34 s policy rollout: grasper approach, lift, dissector approach, jaws closing on tissue, and the energized cut (orange frames, 24 to 29 s).</figcaption>
