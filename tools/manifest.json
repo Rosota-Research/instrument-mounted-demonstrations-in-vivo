@@ -1,0 +1,235 @@
+{
+ "hero": {
+  "source": "images/260904_invivo_robot_rollout_wideview2.png",
+  "variants": [
+   {
+    "file": "hero-2400.webp",
+    "w": 2400,
+    "h": 1200,
+    "bytes": 133946
+   },
+   {
+    "file": "hero-1600.webp",
+    "w": 1600,
+    "h": 800,
+    "bytes": 84562
+   },
+   {
+    "file": "hero-1000.webp",
+    "w": 1000,
+    "h": 500,
+    "bytes": 49490
+   }
+  ]
+ },
+ "fig1-overview": {
+  "source": "arxiv/figures/fig_hero.jpg",
+  "variants": [
+   {
+    "file": "fig1-overview-2400.webp",
+    "w": 2400,
+    "h": 509,
+    "bytes": 145048
+   },
+   {
+    "file": "fig1-overview-1200.webp",
+    "w": 1200,
+    "h": 254,
+    "bytes": 49682
+   }
+  ]
+ },
+ "fig2-logger": {
+  "source": "arxiv/figures/fig_hardware.jpg",
+  "variants": [
+   {
+    "file": "fig2-logger-1380.webp",
+    "w": 1380,
+    "h": 1039,
+    "bytes": 91716
+   },
+   {
+    "file": "fig2-logger-700.webp",
+    "w": 700,
+    "h": 527,
+    "bytes": 34150
+   }
+  ]
+ },
+ "fig3-latency": {
+  "source": "arxiv/figures/fig_latency.png",
+  "variants": [
+   {
+    "file": "fig3-latency-1380.webp",
+    "w": 1380,
+    "h": 1021,
+    "bytes": 133040
+   },
+   {
+    "file": "fig3-latency-700.webp",
+    "w": 700,
+    "h": 518,
+    "bytes": 56842
+   }
+  ]
+ },
+ "fig4-pipeline": {
+  "source": "arxiv/figures/fig_pipeline.png",
+  "variants": [
+   {
+    "file": "fig4-pipeline-1600.webp",
+    "w": 1600,
+    "h": 1475,
+    "bytes": 152142
+   },
+   {
+    "file": "fig4-pipeline-800.webp",
+    "w": 800,
+    "h": 737,
+    "bytes": 66994
+   }
+  ]
+ },
+ "fig5-io": {
+  "source": "arxiv/figures/fig_io.jpg",
+  "variants": [
+   {
+    "file": "fig5-io-2400.webp",
+    "w": 2400,
+    "h": 647,
+    "bytes": 136964
+   },
+   {
+    "file": "fig5-io-1200.webp",
+    "w": 1200,
+    "h": 323,
+    "bytes": 52592
+   }
+  ]
+ },
+ "fig6-selection": {
+  "source": "arxiv/figures/fig_exvivo_hero_C.png",
+  "variants": [
+   {
+    "file": "fig6-selection-2400.webp",
+    "w": 2400,
+    "h": 891,
+    "bytes": 202120
+   },
+   {
+    "file": "fig6-selection-1200.webp",
+    "w": 1200,
+    "h": 445,
+    "bytes": 80664
+   }
+  ]
+ },
+ "fig7-invivo": {
+  "source": "arxiv/figures/fig_invivo.jpg",
+  "variants": [
+   {
+    "file": "fig7-invivo-2400.webp",
+    "w": 2400,
+    "h": 1001,
+    "bytes": 237456
+   },
+   {
+    "file": "fig7-invivo-1200.webp",
+    "w": 1200,
+    "h": 500,
+    "bytes": 97010
+   }
+  ]
+ },
+ "photo-instrument": {
+  "source": "accompanying_videos/media/surgilogger_whole_laparoscopic_instruement.jpg",
+  "variants": [
+   {
+    "file": "photo-instrument-2000.webp",
+    "w": 2000,
+    "h": 800,
+    "bytes": 32234
+   },
+   {
+    "file": "photo-instrument-1000.webp",
+    "w": 1000,
+    "h": 400,
+    "bytes": 8682
+   }
+  ]
+ },
+ "photo-logger": {
+  "source": "accompanying_videos/media/surgilogger_with_housing.jpg",
+  "variants": [
+   {
+    "file": "photo-logger-1600.webp",
+    "w": 1600,
+    "h": 1129,
+    "bytes": 82560
+   },
+   {
+    "file": "photo-logger-800.webp",
+    "w": 800,
+    "h": 565,
+    "bytes": 21742
+   }
+  ]
+ },
+ "photo-sim-compare": {
+  "source": "images/Simulation_real_sim_comparison.png",
+  "variants": [
+   {
+    "file": "photo-sim-compare-2400.webp",
+    "w": 2400,
+    "h": 679,
+    "bytes": 149790
+   },
+   {
+    "file": "photo-sim-compare-1200.webp",
+    "w": 1200,
+    "h": 340,
+    "bytes": 56668
+   }
+  ]
+ },
+ "photo-sim-robot": {
+  "source": "images/Simulation_with_robot.png",
+  "variants": [
+   {
+    "file": "photo-sim-robot-2400.webp",
+    "w": 2400,
+    "h": 836,
+    "bytes": 45744
+   },
+   {
+    "file": "photo-sim-robot-1200.webp",
+    "w": 1200,
+    "h": 418,
+    "bytes": 20182
+   }
+  ]
+ },
+ "photo-exvivo-rig": {
+  "source": "images/260712_exvivo_robot_rollout.png",
+  "variants": [
+   {
+    "file": "photo-exvivo-rig-1600.webp",
+    "w": 1600,
+    "h": 1199,
+    "bytes": 197196
+   },
+   {
+    "file": "photo-exvivo-rig-800.webp",
+    "w": 800,
+    "h": 600,
+    "bytes": 74940
+   }
+  ]
+ },
+ "og-card": {
+  "file": "og-card.jpg",
+  "w": 1200,
+  "h": 630,
+  "bytes": 141765
+ }
+}

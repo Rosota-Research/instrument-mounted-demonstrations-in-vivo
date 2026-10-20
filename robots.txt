@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rosota-research.github.io/instrument-mounted-demonstrations-in-vivo/sitemap.xml
