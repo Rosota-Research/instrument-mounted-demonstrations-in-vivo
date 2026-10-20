@@ -94,3 +94,17 @@ manifest["og-card"] = {"file": "og-card.jpg", "w": 1200, "h": 630, "bytes": os.p
 with open(os.path.join(HERE, "manifest.json"), "w") as f:
     json.dump(manifest, f, indent=1)
 print("og-card", manifest["og-card"])
+
+# Institution logos (trimmed, lossless); sources live in the slides workspace next to this repository.
+LOGOS = {
+    "logo-rosota": os.path.join(ROOT, "..", "slides", "rosota_general_introduction", "deck_src", "assets", "logo_rosota.png"),
+    "logo-snuh-dtm": os.path.join(ROOT, "..", "slides", "rosota_general_introduction", "deck_src", "assets", "snuh_dtm_logo.png"),
+}
+for name, path in LOGOS.items():
+    if not os.path.exists(path):
+        print("logo source missing:", path)
+        continue
+    im = Image.open(path).convert("RGBA")
+    im = im.crop(im.getchannel("A").getbbox())
+    im.save(os.path.join(OUT, f"{name}.webp"), "WEBP", lossless=True, method=6)
+    print(name, im.size)

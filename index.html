@@ -9,8 +9,6 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta name="author" content="Dongho Yee, Juahn Oh, Jinseok Lee, Jiyul Lee, Yechan Seo, Seong Jeong, Minsung Kim, Seonho Shim, Younghoon Noh, Hyuk Choi, Youngbin Kong, Kyu Eun Lee, Hyoun-Joong Kong">
 <meta name="keywords" content="surgical robotics, imitation learning, diffusion policy, laparoscopic appendectomy, in vivo, instrument-mounted demonstrations, DINOv3, latency matching, Franka FR3, ICRA 2027">
-<meta name="theme-color" content="#f5f7fa" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0b1016" media="(prefers-color-scheme: dark)">
 
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Rosota Intelligence Institute">
@@ -50,12 +48,14 @@
 <meta name="citation_technical_report_institution" content="Rosota Intelligence Institute; Seoul National University Hospital">
 <meta name="citation_keywords" content="surgical robotics; imitation learning; diffusion policy; laparoscopic appendectomy; in vivo">
 
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Castoro:ital@0;1&display=swap">
+<meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="assets/css/style.css">
-<link rel="preload" as="image" href="assets/img/hero-1600.webp" imagesrcset="assets/img/hero-1000.webp 1000w, assets/img/hero-1600.webp 1600w, assets/img/hero-2400.webp 2400w" imagesizes="(min-width: 1160px) 1120px, 100vw">
 
 <script type="application/ld+json">
 {
@@ -131,46 +131,13 @@
 </script>
 </head>
 <body>
-<div class="progress" aria-hidden="true"></div>
 
-<header class="topbar">
-  <div class="wrap wrap--wide">
-    <a class="brand" href="#top">In-Vivo Execution from Instrument-Mounted Demonstrations</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#overview">Overview</a>
-      <a href="#video">Video</a>
-      <a href="#logger">Logger</a>
-      <a href="#latency">Latency</a>
-      <a href="#pipeline">Pipeline</a>
-      <a href="#policy">Policy</a>
-      <a href="#invivo">In vivo</a>
-      <a href="#data">Data</a>
-      <a href="#cite">Cite</a>
-    </nav>
-    <div class="topbar-actions">
-      <a class="pill" href="https://arxiv.org/abs/2609.25625">arXiv</a>
-      <a class="pill" href="https://www.rosota.ai">rosota.ai</a>
-      <button class="iconbtn" id="theme-toggle" type="button" aria-label="Switch colour theme" title="Switch theme">
-        <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="top">
 <section class="hero">
-  <div class="wrap">
-    <div class="meta">
-      <a class="pill" href="https://arxiv.org/abs/2609.25625">arXiv:2609.25625</a>
-      <span class="pill">cs.RO · 22 September 2026</span>
-      <span class="pill">Submitted to IEEE ICRA 2027</span>
-      <span class="pill pill--energy">In-vivo study · electrosurgery armed</span>
-    </div>
-    <h1 class="title">From Instrument-Mounted Demonstrations to In-Vivo Execution: <span class="sub">Learning Bimanual Laparoscopic Appendectomy Without Robot-Collected Demonstrations</span></h1>
+  <div class="container has-text-centered">
+    <h1 class="publication-title">From Instrument-Mounted Demonstrations to In-Vivo Execution: <span class="publication-subtitle" style="display:block">Learning Bimanual Laparoscopic Appendectomy Without Robot-Collected Demonstrations</span></h1>
 
-    <p class="authors">
-      <span>Dongho Yee<sup>*1,2,4,5</sup>,</span>
+    <p class="publication-authors">
+      <span><a href="https://arxiv.org/a/yee_d_1">Dongho Yee</a><sup>*1,2,4,5</sup>,</span>
       <span>Juahn Oh<sup>1,2,10</sup>,</span>
       <span>Jinseok Lee<sup>2,4</sup>,</span>
       <span>Jiyul Lee<sup>1,2,3</sup>,</span>
@@ -184,455 +151,324 @@
       <span>Kyu Eun Lee<sup>†6,7</sup>,</span>
       <span>Hyoun-Joong Kong<sup>†1,3,8</sup></span>
     </p>
-    <div class="affils">
-      <ol>
-        <li>Department of Transdisciplinary Medicine, Seoul National University Hospital</li>
-        <li>Rosota Inc., Seoul, Republic of Korea</li>
-        <li>Department of Medicine, Seoul National University College of Medicine</li>
-        <li>Department of Mechanical Engineering, Seoul National University</li>
-        <li>Department of Computer Science and Engineering, Seoul National University</li>
-        <li>Department of Surgery, Seoul National University Hospital</li>
-        <li>Department of Surgery, Seoul National University College of Medicine</li>
-        <li>Institute of Convergence Medicine with Innovative Technology, Seoul National University Hospital</li>
-        <li>Interdisciplinary Program in Medical Informatics, Seoul National University College of Medicine</li>
-        <li>Eulji University College of Medicine</li>
-        <li>Department of Mechanical Engineering, Chungang University</li>
-      </ol>
-      <div class="marks">* First author &nbsp;·&nbsp; † Corresponding authors</div>
+    <div class="publication-affils">
+      <p><sup>1</sup>Department of Transdisciplinary Medicine, Seoul National University Hospital &nbsp; <sup>2</sup>Rosota Inc. &nbsp; <sup>3</sup>Department of Medicine, Seoul National University College of Medicine &nbsp; <sup>4</sup>Department of Mechanical Engineering, Seoul National University &nbsp; <sup>5</sup>Department of Computer Science and Engineering, Seoul National University</p>
+      <p><sup>6</sup>Department of Surgery, Seoul National University Hospital &nbsp; <sup>7</sup>Department of Surgery, Seoul National University College of Medicine &nbsp; <sup>8</sup>Institute of Convergence Medicine with Innovative Technology, Seoul National University Hospital &nbsp; <sup>9</sup>Interdisciplinary Program in Medical Informatics, Seoul National University College of Medicine &nbsp; <sup>10</sup>Eulji University College of Medicine &nbsp; <sup>11</sup>Department of Mechanical Engineering, Chungang University</p>
+    </div>
+    <p class="publication-marks"><sup>*</sup>First author &nbsp;&nbsp; <sup>†</sup>Corresponding authors</p>
+    <p class="publication-venue"><b>arXiv preprint, September 2026</b> &nbsp;·&nbsp; Submitted to IEEE ICRA 2027</p>
+
+    <div class="publication-links">
+      <a class="button" href="https://arxiv.org/pdf/2609.25625"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Paper</a>
+      <a class="button" href="https://arxiv.org/abs/2609.25625"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>arXiv</a>
+      <a class="button" href="assets/video/supplementary-1080p.mp4"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/></svg>Video</a>
+      <a class="button" href="https://github.com/Rosota-Research/ICRA2027-Invivo-main"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v13c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-13M4 12c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg>Data</a>
+      <a class="button" href="https://huggingface.co/surgicalrobotics"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v13H4zM4 7l2-4h12l2 4M10 11h4"/></svg>Hugging Face</a>
+      <a class="button" href="https://www.rosota.ai/posts/instrument-mounted-demonstrations-in-vivo"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>rosota.ai</a>
     </div>
 
-    <div class="actions">
-      <a class="btn btn--primary" href="https://arxiv.org/abs/2609.25625"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h8"/></svg>Paper (arXiv)</a>
-      <a class="btn" href="https://arxiv.org/pdf/2609.25625"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>PDF</a>
-      <a class="btn" href="#video"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10 8.5v7l6-3.5z"/></svg>Video</a>
-      <a class="btn" href="https://github.com/Rosota-Research/ICRA2027-Invivo-main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="8" ry="2.5"/><path d="M4 5.5v13c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5v-13M4 12c0 1.4 3.6 2.5 8 2.5s8-1.1 8-2.5"/></svg>Data (GitHub)</a>
-      <a class="btn" href="https://huggingface.co/surgicalrobotics"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v13H4zM4 7l2-4h12l2 4M10 11h4"/></svg>Hugging Face</a>
-      <a class="btn" href="https://www.rosota.ai/posts/instrument-mounted-demonstrations-in-vivo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>rosota.ai</a>
+    <div class="logos">
+      <a href="https://www.rosota.ai" title="Rosota"><img src="assets/img/logo-rosota.webp" alt="Rosota" width="833" height="232"></a>
+      <a href="https://www.snuh.org" title="Seoul National University Hospital, Department of Transdisciplinary Medicine"><img src="assets/img/logo-snuh-dtm.webp" alt="Seoul National University Hospital, Department of Transdisciplinary Medicine" width="505" height="127"></a>
     </div>
 
-    <figure class="hero-media">
-      <div class="frame">
-        <img src="assets/img/hero-1600.webp" srcset="assets/img/hero-1000.webp 1000w, assets/img/hero-1600.webp 1600w, assets/img/hero-2400.webp 2400w" sizes="(min-width: 1160px) 1120px, 100vw" width="2400" height="1200" alt="Two FR3 robot arms hold laparoscopic instruments through trocars in an anesthetized rabbit while the surgeon supervises at a console in the operating room" fetchpriority="high" decoding="async">
-      </div>
-      <figcaption class="tag"><b>In-vivo deployment, 4 September 2026.</b> Two FR3 arms hold the grasper and dissector through trocars in an anesthetized rabbit. The surgeon supervises at the console and can take control back at any moment.</figcaption>
-    </figure>
-
-    <div class="stats" role="list">
-      <div class="stat" role="listitem"><div class="v num">849</div><div class="l">in-vivo demonstrations from four live rabbits, 135 min</div></div>
-      <div class="stat" role="listitem"><div class="v num">3<small>of 4</small></div><div class="l">live rabbits in which the policy completed the appendectomy</div></div>
-      <div class="stat" role="listitem"><div class="v num">31</div><div class="l">candidate policy configurations compared by closed-loop rollouts</div></div>
-      <div class="stat" role="listitem"><div class="v num">1.36<small>mm</small></div><div class="l">insertion-depth error (RMS) against the FR3 after per-channel latency matching</div></div>
-      <div class="stat" role="listitem"><div class="v num">0.84<small>mm</small></div><div class="l">peak remote-centre-of-motion error under policy control in vivo, against a 5 mm abort threshold</div></div>
+    <div class="teaser wide" id="video">
+      <video controls autoplay loop muted playsinline preload="metadata" poster="assets/img/poster-supplementary.jpg" width="1920" height="1080">
+        <source src="assets/video/supplementary-1080p.mp4" type="video/mp4">
+        Your browser cannot play this video. <a href="assets/video/supplementary-1080p.mp4">Download the MP4</a>.
+      </video>
+      <p class="subtitle">Supplementary video submitted with the paper (2 min 41 s). <b>Demonstrations recorded on a surgeon's own hand-held instruments were sufficient to train, select and deploy a bimanual policy that completed appendectomies with electrosurgery in three of four live rabbits.</b></p>
     </div>
   </div>
 </section>
 
-<section class="section section--flush" id="overview">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Overview</b> · Paper §I</div>
-      <h2>The signal hand-held surgery throws away</h2>
-    </div>
-    <div class="cols">
-      <div class="prose">
-        <p class="lede">Most minimally invasive surgery is still performed by hand. Robotic surgery is growing, with about 3.15 million da Vinci procedures worldwide in 2025, yet in a US national inpatient sample three of four minimally invasive abdominal operations were laparoscopic rather than robotic. On a teleoperated robot the surgeon's instrument motion is recorded as a by-product. In hand-held surgery everything except the endoscope video is lost the moment the operation ends, and that lost signal is exactly what imitation learning needs.</p>
-        <p>This work captures it in the operating room and turns it into a surgical robot policy. A logger on the shaft of an ordinary laparoscopic instrument records the surgeon's own motion. A processing chain aligns its channels. A diffusion policy is trained on those demonstrations, selected by closed-loop rollouts in simulation, retrained on in-vivo recordings, and run on two FR3 arms in live animals with electrosurgery armed. The robot never collected a demonstration. It served only as the timing reference for calibration and as the executor.</p>
-        <h3>Abstract</h3>
+<section class="section" id="abstract">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content has-text-justified">
         <p>Most minimally invasive surgery is still performed with hand-held laparoscopic instruments, and the surgeon's instrument kinematics are lost when the operation ends; only the endoscope video is kept. This paper presents an end-to-end pipeline that captures this motion in the operating room and uses it to train a surgical robot policy, validated on live animals. We introduce a surgical instrument-state logger that mounts on the shaft of a standard laparoscopic instrument and recovers its pose and jaw state from an inertial sensor, a time-of-flight sensor and a Hall sensor, with no external camera or tracker. A data pipeline measures the latency of every sensor channel against a robot ground truth and aligns the channels before forming observation–action pairs. On these demonstrations we train a diffusion policy with a fine-tuned DINOv3 backbone, selecting its design by closed-loop rollouts in a physics simulator reconstructed from depth maps of an ex-vivo rabbit appendix. The policy is then retrained on 849 in-vivo demonstrations from four live rabbits and deployed on four additional live rabbits with electrosurgery armed. With the surgeon selecting the surgical phase, the policy completed the appendectomy in three of the four animals. The results show that demonstrations recorded from a surgeon's own instruments are sufficient to train, select and deploy a bimanual surgical policy in vivo. The robot serves only as the timing reference for sensor calibration and as the executor, and collects no demonstrations. Both demonstration corpora are released to support future surgical robot learning research.</p>
       </div>
-      <aside class="aside">
-        <div class="note"><b>Three contributions.</b> A shaft-mounted instrument-state logger with per-channel latency matching. A policy configuration chosen by closed-loop evidence rather than offline error. In-vivo execution on live animals, retrained from scratch on the in-vivo corpus.</div>
-        <div class="note note--energy"><b>What it is not.</b> Not full autonomy: the surgeon selected the surgical phase. Not a robot-free pipeline: an FR3 is the ground truth for the latency measurement and the ex-vivo test rig, but it collected no training demonstrations.</div>
-      </aside>
     </div>
-
-    <figure class="fig fig--wide reveal">
-      <div class="media"><img src="assets/img/fig1-overview-2400.webp" srcset="assets/img/fig1-overview-1200.webp 1200w, assets/img/fig1-overview-2400.webp 2400w" sizes="(min-width: 1400px) 1320px, 100vw" width="2400" height="509" loading="lazy" decoding="async" alt="Three panels: a surgeon operating on a live rabbit with a logger on the instrument; two FR3 arms performing the procedure on another rabbit; the endoscope view at the moment of electrosurgery"></div>
-      <figcaption><b>Fig. 1</b> From hand-held demonstrations to in-vivo robotic execution. (a) A surgeon performs laparoscopic appendectomy on a live rabbit with ordinary hand-held instruments while a shaft-mounted logger records the instrument state. (b) The diffusion policy trained on those recordings performs the same procedure on a different live rabbit with two FR3 arms under the surgeon's supervision. (c) Endoscope view during policy control at the moment of electrosurgery. Three of four appendectomies were completed under shared autonomy.</figcaption>
-    </figure>
   </div>
 </section>
 
-<section class="section" id="video">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Video</b> · 2 min 41 s</div>
-      <h2>Supplementary video</h2>
-      <p class="lede">The logger, the latency measurement on the robot, closed-loop selection in the simulator, and the in-vivo deployments, in order.</p>
+<section class="section" id="overview">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Overview</h2>
     </div>
-    <figure class="fig fig--wide fig--plain player reveal">
-      <div class="media">
-        <video controls preload="none" playsinline poster="assets/img/poster-supplementary.jpg" width="1920" height="1080">
-          <source src="assets/video/supplementary-1080p.mp4" type="video/mp4">
-          Your browser cannot play this video. <a href="assets/video/supplementary-1080p.mp4">Download the MP4</a>.
-        </video>
+    <figure class="figure wide">
+      <img src="assets/img/fig1-overview-2400.webp" srcset="assets/img/fig1-overview-1200.webp 1200w, assets/img/fig1-overview-2400.webp 2400w" sizes="(min-width: 1072px) 976px, 100vw" width="2400" height="509" alt="Three panels: a surgeon operating on a live rabbit with a logger on the instrument; two FR3 arms performing the procedure on another rabbit; the endoscope view at the moment of electrosurgery">
+      <figcaption><b>Figure 1. From hand-held demonstrations to in-vivo robotic execution.</b> (a) A surgeon performs laparoscopic appendectomy on a live rabbit with ordinary hand-held instruments. A shaft-mounted surgical instrument-state logger records the instrument state. (b) The diffusion policy trained on those recordings performs the same procedure on a different live rabbit with two FR3 arms under the surgeon's supervision. (c) Endoscope view during policy control at the moment of electrosurgery. Three of four appendectomies were completed under shared autonomy.</figcaption>
+    </figure>
+    <div class="narrow content has-text-justified">
+      <p>Most minimally invasive surgery is still performed by hand. Robotic surgery is growing, with about 3.15 million da Vinci procedures worldwide in 2025, yet in a US national inpatient sample of 2012 to 2019 admissions three of four minimally invasive abdominal operations were laparoscopic rather than robotic (75.8% vs. 24.2%). On a teleoperated robot such as the da Vinci, the surgeon's instrument motion is recorded as a by-product; in hand-held surgery, everything except the endoscope video is lost when the operation ends. That lost signal is exactly what imitation learning needs.</p>
+      <p>This paper asks whether the discarded signal of hand-held laparoscopy can be captured in the operating room and turned into a surgical robot policy, and answers it end to end for laparoscopic appendectomy. Our thesis is that a small instrument-state logger on the surgeon's ordinary instrument can stand in for the robot at demonstration time if its channels are synchronized to within one policy step, and that every later stage, from data processing to in-vivo retraining, can be carried out on demonstrations the robot never collected. Our contributions span the entire pipeline:</p>
+      <ol>
+        <li><b>Surgical instrument-state logger.</b> An operating-room-ready device mounted on the instrument that recovers the full instrument state from an inertial measurement unit (IMU), a time-of-flight sensor and a Hall sensor under the trocar's remote-center-of-motion constraint, and a processing chain built on <em>per-channel</em> latency matching against a robot ground truth. The matching halves the dynamic depth error and, when ablated in closed loop, proves necessary for the lift stage (81% vs. 19%).</li>
+        <li><b>A policy configuration selected by closed-loop evidence.</b> Instead of choosing the policy design by offline validation error, we compare 31 candidate designs (backbone, unfreezing depth, phase input, latency matching, replanning) by closed-loop rollouts in a physics simulator built from depth recordings of the ex-vivo scene, score them by stage counts and exact tests, and run only the winner on a two-FR3 rig. A frozen self-supervised ViT backbone removes an order of magnitude of unsafe behavior relative to the standard ResNet-18 encoder, and offline action error turns out to be anti-correlated with closed-loop safety.</li>
+        <li><b>In-vivo execution on live animals.</b> The configuration retrained from scratch on 849 in-vivo demonstrations completed the appendectomy in three of four live rabbits under shared autonomy with electrosurgery armed. Ex-vivo pre-training did not change a single in-vivo decision, which is itself the argument for a device that collects in vivo.</li>
+      </ol>
+      <p>We do not claim full autonomy: the surgeon selected the surgical phase because the vision-based phase predictor collapsed under the deployment endoscope. Nor a robot-free pipeline: an FR3 is the ground truth for the latency measurement and the ex-vivo test rig, but collected no training demonstrations.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="method">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Method</h2>
+      <h3 class="title is-4" id="logger">The surgical instrument-state logger</h3>
+      <div class="content has-text-justified">
+        <p>The surgical instrument-state logger records the pose and jaw opening of a hand-held laparoscopic instrument during real operations, turning the surgeon's own motion into demonstration data. It mounts on the shaft outside the patient, needs no external camera or tracker, and leaves the part that enters the patient untouched. A rigid instrument through a trocar has four degrees of freedom, not six, because the remote-center-of-motion (RCM) constraint removes two. Orientation about the trocar comes from an IMU. The remaining degree of freedom, insertion depth <math><mi>d</mi><mo>=</mo><mi>ℓ</mi><mo>−</mo><mi>r</mi></math>, is the shaft length <math><mi>ℓ</mi></math> from the board to the tip minus the board-to-trocar distance <math><mi>r</mi></math>, which a time-of-flight (ToF) sensor pointed down the shaft measures directly. Each instrument therefore carries one board (Seeed XIAO nRF52840) with a BNO085 IMU and a ToF sensor, plus a linear Hall sensor on the handle (WSH137-XPAN1, sampled at 200 Hz) that reads a magnet on the moving handle ring and so measures jaw opening.</p>
+        <p>Two generations share this principle. The ex-vivo logger (VL53L0X ToF) was powered and read over a USB-C cable and smoothed the depth with an exponential moving average. The in-vivo logger was redesigned for the operating room: a faster ToF (VL53L1X, five-sample moving average, 40 ms), a 1000 mAh lithium-polymer cell and BLE streaming at 50 to 200 Hz, so that no cable leaves the instrument, all housed in a compact enclosure. At the measured draw of about 50 mA the cell lasts roughly 20 h, beyond one operating-room day.</p>
+        <p>Against the FR3 tip pose during free motion, the latency-matched channels track shaft roll and depression to 0.42° and 0.17° RMS and insertion depth to 1.36 mm RMS once the firmware's fixed gain and offset are calibrated out, and the tip displacement over a 1.6 s action chunk to 1.38 mm RMS (2.89 mm at the 95th percentile). Video-based instrument tracking, for comparison, reaches 2.6 to 3.0 mm at best on public benchmarks and 5.4 to 12.4 mm under occlusion; on our own rig, a markerless fit of the shaft's silhouette edges located the axis only to a median 10.7 mm.</p>
       </div>
-      <figcaption>Supplementary video submitted with the paper, 1080p, no audio.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="section" id="logger">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Methods</b> · Paper §III-A</div>
-      <h2>A logger on the surgeon's own instrument</h2>
-      <p class="lede">Four degrees of freedom through the trocar, measured on the shaft, outside the patient.</p>
     </div>
-    <div class="cols">
-      <div class="prose">
-        <p>A rigid instrument through a trocar has four degrees of freedom, not six, because the remote-centre-of-motion constraint removes two. Orientation about the trocar comes from an IMU. The remaining degree of freedom, insertion depth <math><mi>d</mi><mo>=</mo><mi>ℓ</mi><mo>−</mo><mi>r</mi></math>, is the shaft length from the board to the tip minus the board-to-trocar distance, and a time-of-flight sensor pointed down the shaft measures it directly. A linear Hall sensor on the handle reads a magnet on the moving ring and so measures jaw opening.</p>
-        <p>Nothing enters the patient that was not there before. The device mounts outside, on the shaft, and needs no external camera or tracker. The in-vivo generation streams over BLE at 50 to 200 Hz from a 1000 mAh cell, which at the measured 50 mA draw lasts about 20 h, longer than an operating-room day.</p>
-        <p>Against the FR3 tip pose during free motion, the latency-matched channels track shaft roll and depression to 0.42° and 0.17° RMS and insertion depth to 1.36 mm RMS, and tip displacement over a 1.6 s action chunk to 1.38 mm RMS. Video-based instrument tracking, for comparison, reaches 2.6 to 3.0 mm at best on public benchmarks and 5.4 to 12.4 mm under occlusion. A markerless fit of the shaft's silhouette edges on our own rig located the axis only to a median 10.7 mm.</p>
+    <figure class="figure narrow">
+      <img src="assets/img/fig2-logger-1380.webp" srcset="assets/img/fig2-logger-700.webp 700w, assets/img/fig2-logger-1380.webp 1380w" sizes="(min-width: 848px) 800px, 100vw" width="1380" height="1039" loading="lazy" alt="The ex-vivo logger, the in-vivo logger with its enclosure open and components labelled, four in-vivo loggers, and the four-degree-of-freedom geometry through the trocar">
+      <figcaption><b>Figure 2. The surgical instrument-state logger.</b> (a) The ex-vivo logger on a laparoscopic grasper. (b) The in-vivo logger with its enclosure open: nRF52840 microcontroller, BNO085 IMU, VL53L1X ToF sensor, 1000 mAh lithium-polymer cell and, on the handle, the WSH137 Hall sensor and its magnet. (c) Four in-vivo loggers as used in the operating room: the same sensors in a compact enclosure with no exposed wiring. (d) Geometry: four degrees of freedom through the trocar. Roll ρ and depression θ come from the gravity-referenced IMU, insertion depth d from the ToF ray to the trocar, and jaw opening from the Hall sensor.</figcaption>
+    </figure>
+    <div class="narrow">
+      <div class="media-row">
+        <div><img src="assets/img/photo-instrument-2000.webp" srcset="assets/img/photo-instrument-1000.webp 1000w, assets/img/photo-instrument-2000.webp 2000w" sizes="(min-width: 848px) 390px, 100vw" width="2000" height="800" loading="lazy" alt="A standard laparoscopic grasper with the in-vivo logger on its shaft near the handle"><p>The in-vivo logger on a standard laparoscopic grasper.</p></div>
+        <div><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-logger-tracking.jpg" width="1280" height="720" aria-label="The logger tracked live on a laparoscopic phantom"><source src="assets/video/logger-tracking.mp4" type="video/mp4"></video><p>Live tracking of the instrument state on a laparoscopic phantom.</p></div>
       </div>
-      <aside class="aside">
-        <div class="loop reveal">
-          <video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-logger-tracking.jpg" width="1280" height="720" aria-label="The logger tracked live on a laparoscopic phantom"><source src="assets/video/logger-tracking.mp4" type="video/mp4"></video>
-          <span class="tag">Live tracking on a phantom</span>
-        </div>
-        <div class="note"><b>Per instrument.</b> Seeed XIAO nRF52840 board, BNO085 IMU, VL53L1X time-of-flight sensor, WSH137 Hall sensor on the handle, 1000 mAh lithium-polymer cell, BLE at 50 to 200 Hz.</div>
-      </aside>
     </div>
-    <figure class="fig fig--wide fig--plain reveal">
-      <div class="media"><img src="assets/img/photo-instrument-2000.webp" srcset="assets/img/photo-instrument-1000.webp 1000w, assets/img/photo-instrument-2000.webp 2000w" sizes="(min-width: 1400px) 1320px, 100vw" width="2000" height="800" loading="lazy" decoding="async" alt="A standard laparoscopic grasper with the in-vivo logger clipped on its shaft near the handle"></div>
-      <figcaption>The in-vivo logger on a standard laparoscopic grasper. The shaft that enters the patient is untouched.</figcaption>
-    </figure>
-    <figure class="fig reveal">
-      <div class="media"><img src="assets/img/fig2-logger-1380.webp" srcset="assets/img/fig2-logger-700.webp 700w, assets/img/fig2-logger-1380.webp 1380w" sizes="(min-width: 1160px) 1120px, 100vw" width="1380" height="1039" loading="lazy" decoding="async" alt="The ex-vivo logger, the in-vivo logger with its enclosure open and components labelled, four in-vivo loggers, and the four-degree-of-freedom geometry through the trocar"></div>
-      <figcaption><b>Fig. 2</b> The surgical instrument-state logger. (a) The ex-vivo logger on a laparoscopic grasper. (b) The in-vivo logger with its enclosure open: nRF52840 microcontroller, BNO085 IMU, VL53L1X ToF sensor, 1000 mAh lithium-polymer cell and, on the handle, the WSH137 Hall sensor and its magnet. (c) Four in-vivo loggers as used in the operating room. (d) Geometry: four degrees of freedom through the trocar. Roll ρ and depression θ come from the gravity-referenced IMU, insertion depth d from the ToF ray to the trocar, and jaw opening from the Hall sensor.</figcaption>
-    </figure>
-  </div>
-</section>
 
-<section class="section" id="latency">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Methods</b> · Paper §III-B</div>
-      <h2>Every channel is late, and by a different amount</h2>
-      <p class="lede">A transport delay can be undone by a time shift. A first-order lag cannot, because part of the motion is gone.</p>
-    </div>
-    <div class="cols">
-      <div class="prose">
-        <p>Each channel reaches the log later than the event it describes. An FR3 drove an instrument carrying the logger through a phantom trocar along swept sines while its tip pose, published at 200 Hz, served as ground truth, and each channel was fitted with</p>
-        <math display="block"><mi>H</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>L</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ω</mi><mi>T</mi></mrow></mfrac><mo>,</mo></math>
-        <p>where <math><mi>L</mi></math> is a pure transport delay and <math><mi>T</mi></math> the time constant of a first-order lag. The distinction matters. A channel with <math><mi>T</mi><mo>≈</mo><mn>0</mn></math> can be corrected by a time shift; one with a large <math><mi>T</mi></math> cannot, because part of the motion is gone.</p>
-        <p>On the ex-vivo logger the attitude channels showed pure transport delays of 24 to 26 ms, while insertion depth showed <math><mi>L</mi><mo>+</mo><mi>T</mi><mo>=</mo><mn>349</mn></math> ms, 93% of it first-order lag from the firmware's exponential moving average, with gain falling to 0.42 at 1 Hz. The resulting 325 ms depth-to-attitude skew is 3.5 policy steps at 10 Hz, and no common time shift can remove it. Rewinding each channel by its own latency (−17, +307 and +37 ms for attitude, depth and jaw) cut dynamic depth error from 2.69 to 1.36 mm (−49.5%) and shaft-roll error by 28%. The depression channel, whose 26 ms latency is below what the motion resolves, changed by +2% and serves as the control.</p>
+    <div class="narrow">
+      <h3 class="title is-4" id="latency">Per-channel latency matching</h3>
+      <div class="content has-text-justified">
+        <p>Each channel reaches the log later than the event it describes, by a different amount. A Franka FR3 drove an instrument carrying the logger through the phantom trocar along swept-sine trajectories while its tip pose, published at 200 Hz from the 1 kHz joint state, served as ground truth, and for each channel we fitted the response</p>
+        <span class="eq"><math display="block"><mi>H</mi><mo>(</mo><mi>j</mi><mi>ω</mi><mo>)</mo><mo>=</mo><mfrac><msup><mi>e</mi><mrow><mo>−</mo><mi>j</mi><mi>ω</mi><mi>L</mi></mrow></msup><mrow><mn>1</mn><mo>+</mo><mi>j</mi><mi>ω</mi><mi>T</mi></mrow></mfrac><mo>,</mo></math></span>
+        <p>where <math><mi>L</mi></math> is a pure transport delay and <math><mi>T</mi></math> the time constant of a first-order lag. The distinction matters: a channel with <math><mi>T</mi><mo>≈</mo><mn>0</mn></math> can be corrected by a time shift, one with a large <math><mi>T</mi></math> cannot, because part of the motion is gone.</p>
+        <p>On the ex-vivo logger the attitude channels showed pure transport delays of 24 to 26 ms, while insertion depth showed <math><mi>L</mi><mo>+</mo><mi>T</mi><mo>=</mo><mn>349</mn></math> ms, 93% of it first-order lag from the firmware's exponential moving average, with gain falling to 0.42 at 1 Hz. The resulting 325 ms depth–attitude skew is 3.5 policy steps at 10 Hz, and no common time shift can remove it. Rewinding each channel by its own latency (−17, +307 and +37 ms for attitude, depth and jaw) cut dynamic depth error from 2.69 to 1.36 mm (−49.5%) and shaft-roll error by 28%. The depression channel, whose 26 ms latency is below what the motion resolves, changed by +2% and serves as the control.</p>
       </div>
-      <aside class="aside">
-        <div class="loop reveal">
-          <video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-latency-rig.jpg" width="398" height="720" aria-label="An FR3 drives the instrument through the phantom trocar for the latency measurement"><source src="assets/video/latency-rig.mp4" type="video/mp4"></video>
-          <span class="tag">FR3 swept-sine excitation</span>
-        </div>
-      </aside>
     </div>
-    <figure class="fig reveal">
-      <div class="media"><img src="assets/img/fig3-latency-1380.webp" srcset="assets/img/fig3-latency-700.webp 700w, assets/img/fig3-latency-1380.webp 1380w" sizes="(min-width: 1160px) 1120px, 100vw" width="1380" height="1021" loading="lazy" decoding="async" alt="Latency measurement setup, fitted delay and gain per channel against frequency, and dynamic error before and after per-channel rewinding"></div>
-      <figcaption><b>Fig. 3</b> Per-channel latency. (a) An FR3 drives the instrument through the phantom trocar with swept sines; its tip pose is the ground truth. (b) Fitted delay and (c) gain per channel versus excitation frequency, ex-vivo logger. Only insertion depth is frequency dependent, a first-order lag rather than a transport delay. (d) Dynamic error before and after rewinding each channel by its own latency; the depression channel is the control.</figcaption>
+    <figure class="figure narrow">
+      <img src="assets/img/fig3-latency-1380.webp" srcset="assets/img/fig3-latency-700.webp 700w, assets/img/fig3-latency-1380.webp 1380w" sizes="(min-width: 848px) 800px, 100vw" width="1380" height="1021" loading="lazy" alt="Latency measurement setup, fitted delay and gain per channel against frequency, and dynamic error before and after per-channel rewinding">
+      <figcaption><b>Figure 3. Per-channel latency.</b> (a) An FR3 drives the instrument through the phantom trocar with swept sines; its tip pose is the ground truth. (b) Fitted delay and (c) gain per channel versus excitation frequency, ex-vivo logger (in-vivo logger: same protocol, values in the paper). Only insertion depth is frequency dependent, a first-order lag rather than a transport delay. (d) Dynamic error before and after rewinding each channel by its own latency; the depression channel is the control.</figcaption>
     </figure>
-  </div>
-</section>
 
-<section class="section" id="pipeline">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Methods</b> · Paper §III-C</div>
-      <h2>From logs to training pairs</h2>
-      <p class="lede">Every stream is stamped with absolute time at the earliest receive point, rewound by its own measured latency and resampled on the endoscope clock.</p>
-    </div>
-    <div class="cols">
-      <div class="prose">
-        <p>The magnetometer heading of a low-cost IMU drifts in an operating room, so the observation uses only what gravity and the trocar define: the endoscope frame at 320 × 192 and, per arm, <math><mo>[</mo><mi>cos</mi><mi>ρ</mi><mo>,</mo><mi>sin</mi><mi>ρ</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>d</mi><mo>/</mo><msub><mi>d</mi><mi>max</mi></msub><mo>]</mo></math>. The jaw aperture is deliberately not an input. With it, the policy learns "it is closed now, so keep closing".</p>
+    <div class="narrow">
+      <h3 class="title is-4" id="pipeline">From logs to training pairs</h3>
+      <div class="content has-text-justified">
+        <p>Every recorder, the boards, the endoscope capture and a foot-pedal "energy" channel that mirrors the electrosurgical pedal, stamps each sample with the host's absolute time at the earliest receive point; streams are merged offline by that time, rewound by their own measured latency and resampled on the endoscope clock. The magnetometer heading of a low-cost IMU drifts in an operating room, so the observation uses only what gravity and the trocar define: the endoscope frame at 320 × 192 and, per arm, <math><mo>[</mo><mi>cos</mi><mi>ρ</mi><mo>,</mo><mi>sin</mi><mi>ρ</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>d</mi><mo>/</mo><msub><mi>d</mi><mi>max</mi></msub><mo>]</mo></math>. The jaw aperture is deliberately <em>not</em> an input; with it, the policy learns "it is closed now, so keep closing".</p>
         <p>Actions are 16-step chunks at 10 Hz of per-arm tip-frame deltas relative to the chunk's anchor pose, plus absolute jaw aperture and, in vivo, an absolute electrosurgery channel owned by the cutting arm. Because every label is relative to its anchor, it is invariant to the heading zero and to where the trocar sits, so no correspondence between the demonstration trocar and the robot's trocar is needed.</p>
-        <p>Of 1,003 raw in-vivo episodes, 135 were dropped for sensor-stream quality or because they were not part of the procedure, and 19 more for a missing phase or an early-ending stream.</p>
       </div>
-      <figure class="fig fig--inline reveal">
-        <div class="media"><img src="assets/img/fig4-pipeline-1600.webp" srcset="assets/img/fig4-pipeline-800.webp 800w, assets/img/fig4-pipeline-1600.webp 1600w" sizes="(min-width: 960px) 420px, 100vw" width="1600" height="1475" loading="lazy" decoding="async" alt="Block diagram of the data pipeline from raw sensor logs through time stamping, latency rewinding and resampling to observation and action pairs"></div>
-        <figcaption><b>Fig. 4</b> Data pipeline from raw sensor logs to training pairs. Observations use only quantities referenced to gravity and the trocar, so that magnetometer drift never enters the policy.</figcaption>
-      </figure>
     </div>
-    <figure class="fig fig--wide reveal">
-      <div class="media"><img src="assets/img/fig5-io-2400.webp" srcset="assets/img/fig5-io-1200.webp 1200w, assets/img/fig5-io-2400.webp 2400w" sizes="(min-width: 1400px) 1320px, 100vw" width="2400" height="647" loading="lazy" decoding="async" alt="Model input panel with the endoscope frame and per-arm roll, depression and depth, and action chunk panel with each arm's 16-step tip path, roll, jaw and energy channels"></div>
-      <figcaption><b>Fig. 5</b> Policy observation and action chunk for one in-vivo demonstration at t = 1.7 s, as the grasper closes on the appendix and the dissector approaches. (a) Model input: the endoscope frame and, per arm, shaft roll ρ, depression θ and insertion depth d after per-channel latency matching. (b) The action chunk anchored at 1.6 s: each arm's 16-step tip path in its tool frame, the emitted roll (spokes) and jaw channels, and the energy timeline (mauve). All of it was recorded by the logger on the surgeon's own instruments.</figcaption>
+    <figure class="figure half">
+      <img src="assets/img/fig4-pipeline-1600.webp" srcset="assets/img/fig4-pipeline-800.webp 800w, assets/img/fig4-pipeline-1600.webp 1600w" sizes="(min-width: 668px) 620px, 100vw" width="1600" height="1475" loading="lazy" alt="Block diagram of the data pipeline from raw sensor logs through time stamping, latency rewinding and resampling to observation and action pairs">
+      <figcaption><b>Figure 4. Data pipeline from raw sensor logs to training pairs.</b> Every stream is stamped with absolute time, rewound by its own measured latency and resampled on the endoscope clock. Observations use only quantities referenced to gravity and the trocar, so that magnetometer drift never enters the policy.</figcaption>
     </figure>
-    <div class="tbl reveal">
-      <table>
-        <thead><tr><th>Corpus</th><th class="n">Episodes</th><th class="n">Duration</th><th>Setting</th></tr></thead>
-        <tbody>
-          <tr><td>Ex-vivo</td><td class="n">533</td><td class="n">74 min</td><td>2 rabbit cadavers in a phantom, ex-vivo logger</td></tr>
-          <tr><td>In-vivo</td><td class="n">849</td><td class="n">135 min</td><td>4 live rabbits, in-vivo logger, energy pedal</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tbl-cap"><b>Table I</b> Demonstration corpora used for training. Each episode is one attempt at the appendectomy recorded with the logger on the surgeon's hand-held instruments. Duration is the total recorded time after quality filtering.</p>
-  </div>
-</section>
+    <figure class="figure wide">
+      <img src="assets/img/fig5-io-2400.webp" srcset="assets/img/fig5-io-1200.webp 1200w, assets/img/fig5-io-2400.webp 2400w" sizes="(min-width: 1072px) 976px, 100vw" width="2400" height="647" loading="lazy" alt="Model input panel with the endoscope frame and per-arm roll, depression and depth, and action chunk panel with each arm's 16-step tip path, roll, jaw and energy channels">
+      <figcaption><b>Figure 5. Policy observation and action chunk</b> for one in-vivo demonstration at t = 1.7 s, as the grasper closes on the appendix and the dissector approaches. (a) Model input: the endoscope frame and, per arm, shaft roll ρ, depression θ and insertion depth d after per-channel latency matching, as time series and as instantaneous gauges. (b) The action chunk anchored at 1.6 s: each arm's 16-step tip path in its tool frame, the emitted roll (spokes) and jaw channels, and the energy timeline (mauve). All of it was recorded by the surgical instrument-state logger on the surgeon's own instruments.</figcaption>
+    </figure>
 
-<section class="section" id="policy">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Methods and Experiments</b> · Paper §III-D, §III-E, §IV-B</div>
-      <h2>The policy, and how its configuration was chosen</h2>
-      <p class="lede">31 candidates were compared by closed-loop rollouts in a simulator reconstructed from the ex-vivo scene. Offline validation error turned out to be anti-correlated with safety.</p>
-    </div>
-    <div class="cols">
-      <div class="prose">
+    <div class="narrow">
+      <h3 class="title is-4" id="policy">Policy</h3>
+      <div class="content has-text-justified">
         <p>The policy is a 1-D U-Net diffusion policy with DDIM sampling over 16-step chunks, with three changes. A single shared DINOv3 ViT-B/16 replaces the two ResNet-18 encoders, with attention pooling and only the last transformer block trainable (7.1 M of 85.7 M parameters). Because the observation window is 0.2 s, the policy cannot infer where in the procedure it is, so the U-Net is conditioned by FiLM on an ordinal encoding of the surgical phase plus two timing channels. And a chunk executor commits three actions per chunk and replans, with the index it starts from absorbing the observation anchor, the arm's measured execution latency and inference.</p>
-        <p>Rather than select that configuration by offline validation error, 31 candidates were compared by closed-loop rollouts in a simulator whose organs are reconstructed from depth recordings of the ex-vivo scene: 16 episodes of 15 s each, scored on stage counts and on one hard failure, a trocar violation above 10 mm.</p>
-        <h3>Three results from the table</h3>
-        <ul>
-          <li>Replacing the ResNet-18 encoders with a frozen DINOv3 cut trocar violations from 88% to 6% (Fisher p = 7 × 10⁻⁶) and raised lift from 12% to 69%.</li>
-          <li>Training the same configuration on episodes processed <em>without</em> per-channel latency matching left violations unchanged but eliminated successful lifts (19% vs. 81%, p = 0.001), while its offline action error was <em>better</em>, 0.138 against 0.148.</li>
-          <li>Across the unfreezing sweep, validation MAE improves monotonically from 0.152 to 0.142 while violations rise from 6% to 69%. The least safe encoder, ResNet-18, has a better MAE than the frozen DINOv3.</li>
-        </ul>
-        <p>In this setting offline error is not merely uninformative about closed-loop success. It is anti-correlated with safety.</p>
       </div>
-      <aside class="aside">
-        <div class="note"><b>Selection criterion.</b> A policy that does nothing never violates the trocar, so violations alone cannot select a configuration; GR00T-H and the frozen backbone score well on it for that reason. The criterion was therefore the full approach without a violation: lift, arrive at the site and close the jaw on tissue, the furthest stage the simulator can score.</div>
-        <div class="note note--energy"><b>Cost of the choice.</b> Unfreezing one block raises simulated trocar violations from 6% to 19% (p = 0.6), a cost that did not materialize on the real rig or in vivo.</div>
-      </aside>
+      <h3 class="title is-4" id="simulator">Simulator and selection protocol</h3>
+      <div class="content has-text-justified">
+        <p>Rather than select the configuration by offline validation error, 31 candidates were compared by closed-loop rollouts in a simulator whose organs are reconstructed from RealSense D405 depth recordings of the ex-vivo scene: 16 episodes of 15 s each, scored on stage counts (lift, arrival at the site, jaw closed on tissue) and on one hard failure, a trocar violation above 10 mm. Because sim-to-real transfer for deformable tissue remains unreliable, the simulator is used to compare configurations under one protocol, and only the chosen one runs on the real rig. The simulator itself is described in a companion paper (see below).</p>
+      </div>
     </div>
-
-    <div class="chart reveal">
-          <h4>Unfreezing sweep: offline error improves while safety degrades</h4>
-          <div class="panels">
-            <svg id="chart-mae" role="img" aria-label="Validation MAE falls from 0.152 to 0.142 as zero to four DINOv3 blocks are unfrozen"></svg>
-            <svg id="chart-viol" role="img" aria-label="Trocar violations rise from 6 to 69 percent of episodes as zero to four DINOv3 blocks are unfrozen"></svg>
-          </div>
-          <div class="legend"><span><i></i>Configuration in the sweep</span><span><i class="energy"></i>Deployed: one block unfrozen</span></div>
-          <p class="foot">Table II values. 16 closed-loop episodes of 15 s per configuration; violations are episodes with a trocar excursion above 10 mm.</p>
-    </div>
-
-    <figure class="fig fig--wide reveal">
-      <div class="media"><img src="assets/img/fig6-selection-2400.webp" srcset="assets/img/fig6-selection-1200.webp 1200w, assets/img/fig6-selection-2400.webp 2400w" sizes="(min-width: 1400px) 1320px, 100vw" width="2400" height="891" loading="lazy" decoding="async" alt="Three stages: demonstrations collected in a laparoscopic phantom, candidate policies run in the reconstructed simulator, and the selected configuration validated on the real two-FR3 rig"></div>
-      <figcaption><b>Fig. 6</b> Ex-vivo policy selection. Demonstrations recorded with the ex-vivo logger in a laparoscopic phantom (left) train the candidate policy configurations. Every candidate runs closed-loop episodes in a simulator whose organs are reconstructed from the phantom's depth maps (middle). The configuration with the highest full-approach rate without a trocar violation is run on the real two-FR3 rig (right) and becomes the policy configuration retrained for in vivo.</figcaption>
+    <figure class="figure narrow boxed">
+      <img src="assets/img/photo-sim-compare-2400.webp" srcset="assets/img/photo-sim-compare-1200.webp 1200w, assets/img/photo-sim-compare-2400.webp 2400w" sizes="(min-width: 848px) 800px, 100vw" width="2400" height="679" loading="lazy" alt="Side by side: the real endoscope frame of the ex-vivo phantom and the simulator's rendering of the organs reconstructed from the RealSense D405 depth map">
+      <figcaption>The real endoscope frame of the ex-vivo phantom (left) and the simulator's organs reconstructed from the D405 depth map (right).</figcaption>
     </figure>
-
-    <div class="tbl reveal">
-      <table>
-        <thead>
-          <tr><th>Configuration</th><th class="n">Trocar violation ↓</th><th class="n">Lift ↑</th><th class="n">Full approach ↑</th><th class="n">Grasp depth (mm) ↑</th><th class="n">MAE ↓</th></tr>
-        </thead>
-        <tbody>
-          <tr class="group"><td colspan="6">Model</td></tr>
-          <tr><td>GR00T-H (VLA), no phase</td><td class="n">12%<span class="ci">[3–36]</span></td><td class="n">50%</td><td class="n">0%<span class="ci">[0–19]</span></td><td class="n">—</td><td class="n">0.184</td></tr>
-          <tr><td>DP, ResNet-18</td><td class="n">88%<span class="ci">[64–97]</span></td><td class="n">12%</td><td class="n">12%<span class="ci">[3–36]</span></td><td class="n">13.9</td><td class="n">0.145</td></tr>
-          <tr><td>DP, DINOv3 frozen</td><td class="n"><b>6%</b><span class="ci">[1–28]</span></td><td class="n">69%</td><td class="n">44%<span class="ci">[23–67]</span></td><td class="n">0.0</td><td class="n">0.152</td></tr>
-          <tr class="kept"><td>DP, DINOv3, last block unfrozen</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n"><b>81%</b></td><td class="n"><b>81%</b><span class="ci">[57–93]</span></td><td class="n">10.8</td><td class="n">0.148</td></tr>
-          <tr class="group"><td colspan="6">Phase input (fixed: DINOv3, last block unfrozen)</td></tr>
-          <tr class="kept"><td>Manual phase</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n"><b>81%</b></td><td class="n"><b>81%</b><span class="ci">[57–93]</span></td><td class="n">10.8</td><td class="n">0.148</td></tr>
-          <tr><td>TCN (demo video)</td><td class="n">50%<span class="ci">[28–72]</span></td><td class="n">31%</td><td class="n">25%<span class="ci">[10–49]</span></td><td class="n">5.2</td><td class="n">0.148</td></tr>
-          <tr><td>TCN (simulator)</td><td class="n">25%<span class="ci">[10–49]</span></td><td class="n">38%</td><td class="n">38%<span class="ci">[18–61]</span></td><td class="n">10.3</td><td class="n">0.148</td></tr>
-          <tr class="group"><td colspan="6">Unfrozen DINOv3 blocks (fixed: manual phase)</td></tr>
-          <tr><td>None (frozen)</td><td class="n"><b>6%</b><span class="ci">[1–28]</span></td><td class="n">69%</td><td class="n">44%<span class="ci">[23–67]</span></td><td class="n">0.0</td><td class="n">0.152</td></tr>
-          <tr class="kept"><td>Last 1 block</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n"><b>81%</b></td><td class="n"><b>81%</b><span class="ci">[57–93]</span></td><td class="n">10.8</td><td class="n">0.148</td></tr>
-          <tr><td>Last 2 blocks</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n">50%</td><td class="n">50%<span class="ci">[28–72]</span></td><td class="n">10.7</td><td class="n">0.146</td></tr>
-          <tr><td>Last 3 blocks</td><td class="n">56%<span class="ci">[33–77]</span></td><td class="n">38%</td><td class="n">38%<span class="ci">[18–61]</span></td><td class="n">9.3</td><td class="n">0.143</td></tr>
-          <tr><td>Last 4 blocks</td><td class="n">69%<span class="ci">[44–86]</span></td><td class="n">31%</td><td class="n">31%<span class="ci">[14–56]</span></td><td class="n">8.8</td><td class="n">0.142</td></tr>
-          <tr class="group"><td colspan="6">Latency matching (fixed: DINOv3, last block unfrozen, manual phase)</td></tr>
-          <tr class="kept"><td>With</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n"><b>81%</b></td><td class="n"><b>81%</b><span class="ci">[57–93]</span></td><td class="n">10.8</td><td class="n">0.148</td></tr>
-          <tr><td>Without</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n">19%</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n">11.0</td><td class="n">0.138</td></tr>
-          <tr class="group"><td colspan="6">Replanning (fixed: DINOv3, last block unfrozen, manual phase)</td></tr>
-          <tr class="kept"><td>n<sub>exec</sub> = 3</td><td class="n">19%<span class="ci">[7–43]</span></td><td class="n"><b>81%</b></td><td class="n"><b>81%</b><span class="ci">[57–93]</span></td><td class="n">10.8</td><td class="n">0.148</td></tr>
-          <tr><td>n<sub>exec</sub> = 1</td><td class="n">69%<span class="ci">[44–86]</span></td><td class="n">31%</td><td class="n">31%<span class="ci">[14–56]</span></td><td class="n">10.7</td><td class="n">0.148</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p class="tbl-cap"><b>Table II</b> Closed-loop simulator results of the ex-vivo configuration ablation. 16 episodes of 15 s per configuration. Lift and Full approach (the selection criterion) count violation-free episodes; brackets are 95% confidence intervals. Italic rows name the factor varied and the settings already fixed. Highlighted rows mark the setting kept. All rows use latency matching and n<sub>exec</sub> = 3 unless varied. DP: diffusion policy.</p>
-
-    <div class="simgrid">
-      <div class="simcard reveal">
-        <div class="loop"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-resnet18.jpg" width="640" height="360" aria-label="Simulator endoscope view, ResNet-18 policy"><source src="assets/video/sim-resnet18.mp4" type="video/mp4"></video></div>
-        <h4>DP, ResNet-18</h4>
-        <div class="row"><span>Violation <b>88%</b></span><span>Full approach <b>12%</b></span></div>
-        <p>Episode 10 of 16: lifts, then leaves the trocar band and the episode ends.</p>
-      </div>
-      <div class="simcard reveal">
-        <div class="loop"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-dinov3-frozen.jpg" width="640" height="360" aria-label="Simulator endoscope view, frozen DINOv3 policy"><source src="assets/video/sim-dinov3-frozen.mp4" type="video/mp4"></video></div>
-        <h4>DP, DINOv3 frozen</h4>
-        <div class="row"><span>Violation <b>6%</b></span><span>Full approach <b>44%</b></span></div>
-        <p>Episode 7 of 16: safe, but the jaw never closes on tissue.</p>
-      </div>
-      <div class="simcard reveal">
-        <div class="loop"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-no-latency.jpg" width="640" height="360" aria-label="Simulator endoscope view, policy trained without latency matching"><source src="assets/video/sim-no-latency.mp4" type="video/mp4"></video></div>
-        <h4>Without latency matching</h4>
-        <div class="row"><span>Violation <b>19%</b></span><span>Full approach <b>19%</b></span></div>
-        <p>Episode 0 of 16: the coordinated insertion that lifting needs does not happen.</p>
-      </div>
-      <div class="simcard reveal">
-        <div class="loop"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-deployed.jpg" width="640" height="360" aria-label="Simulator endoscope view, deployed configuration"><source src="assets/video/sim-deployed.mp4" type="video/mp4"></video></div>
-        <h4>DINOv3, last block unfrozen <span class="kept">deployed</span></h4>
-        <div class="row"><span>Violation <b>19%</b></span><span>Full approach <b>81%</b></span></div>
-        <p>Episode 1 of 16: grasp, lift of 40 mm, dissector at the site.</p>
-      </div>
-    </div>
-    <p class="tbl-cap">Simulator endoscope recordings of the Table II evaluations, 10 fps, one frame per policy step. The full set of 16 episodes per configuration is in the paper workspace.</p>
-
-    <div class="cols" style="margin-top:3rem">
-      <div class="prose">
-        <h3>On the real ex-vivo rig</h3>
-        <p>The selected configuration ran on the two-FR3 rig with a rabbit cadaver for about 18 minutes of policy control across 15 sessions with zero trocar violations and a peak RCM error of 0.23 mm. The vision-based phase predictor, however, saturated at the final phase within a median of 10.6 s, because rig frames lay outside its training manifold, so in vivo the surgeon set the phase by keypress.</p>
-        <figure class="fig reveal">
-          <div class="media"><img src="assets/img/photo-sim-compare-2400.webp" srcset="assets/img/photo-sim-compare-1200.webp 1200w, assets/img/photo-sim-compare-2400.webp 2400w" sizes="(min-width: 960px) 640px, 100vw" width="2400" height="679" loading="lazy" decoding="async" alt="Side by side: the real endoscope frame of the ex-vivo phantom and the simulator's rendering of the organs reconstructed from the RealSense D405 depth map"></div>
-          <figcaption>The real endoscope frame (left) and the simulator's organs reconstructed from the D405 depth map (right). The simulator is used to compare configurations under one protocol, and only the chosen one runs on the real rig.</figcaption>
-        </figure>
-      </div>
-      <aside class="aside">
-        <div class="loop reveal">
-          <video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-exvivo-rig.jpg" width="720" height="720" aria-label="Endoscope view of the selected policy running on the real two-FR3 rig with a rabbit cadaver"><source src="assets/video/exvivo-rig.mp4" type="video/mp4"></video>
-          <span class="tag">Real rig, rabbit cadaver, policy control</span>
-        </div>
-        <figure class="fig fig--inline fig--plain reveal">
-          <div class="media"><img src="assets/img/photo-exvivo-rig-1600.webp" srcset="assets/img/photo-exvivo-rig-800.webp 800w, assets/img/photo-exvivo-rig-1600.webp 1600w" sizes="(min-width: 960px) 420px, 100vw" width="1600" height="1199" loading="lazy" decoding="async" alt="The two-FR3 ex-vivo rig: a surgeon at the phase keypress, monitors, and two arms holding instruments through a laparoscopic phantom"></div>
-          <figcaption>The two-FR3 ex-vivo rig.</figcaption>
-        </figure>
-      </aside>
-    </div>
   </div>
 </section>
 
-<section class="section" id="invivo">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Experiments</b> · Paper §IV-C, §IV-D</div>
-      <h2>In-vivo training and deployment</h2>
-      <p class="lede">Retrained from scratch on the 849 in-vivo demonstrations, with the ex-vivo configuration and optimizer-step budget unchanged, and run on four live rabbits on a single day.</p>
-    </div>
-    <div class="fig-row">
-      <div class="loop reveal">
-        <video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-invivo-collection.jpg" width="1280" height="720" aria-label="A surgeon collects demonstrations on a live rabbit with instruments carrying the in-vivo logger"><source src="assets/video/invivo-collection.mp4" type="video/mp4"></video>
-        <span class="tag">Demonstration collection, 30 August 2026</span>
+<section class="section" id="experiments">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Experiments</h2>
+      <h3 class="title is-4" id="corpora">Demonstration corpora</h3>
+      <div class="content has-text-justified">
+        <p>Both corpora were captured with the surgical instrument-state logger alone: one unit on the shaft of each instrument streamed its channels to the recording host (over USB ex vivo, over BLE in vivo), which also captured the endoscope and the pedal channel. No marker, external tracker or calibration object entered the field, and the surgeon worked with the instruments as usual. Each episode is one attempt at the procedure. The ex-vivo corpus is 533 episodes on two rabbit cadaver specimens in a laparoscopic training phantom, recorded by two surgeons. The in-vivo corpus comes from four live rabbits in one operating-room session, trocars through the abdominal wall, with a dissector and an electrosurgical unit on the right arm; of 1,003 raw episodes, 849 survive the quality filters.</p>
       </div>
-      <div class="loop reveal">
-        <video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-invivo-rollout.jpg" width="1092" height="816" aria-label="Two FR3 arms execute the policy on a live rabbit while the surgeon supervises"><source src="assets/video/invivo-rollout.mp4" type="video/mp4"></video>
-        <span class="tag">Policy deployment, 4 September 2026</span>
+      <div class="table-container">
+        <table class="table">
+          <thead><tr><th>Corpus</th><th class="num">Episodes</th><th class="num">Duration</th><th>Setting</th></tr></thead>
+          <tbody>
+            <tr><td>Ex-vivo</td><td class="num">533</td><td class="num">74 min</td><td>2 rabbit cadavers in a phantom, ex-vivo logger</td></tr>
+            <tr><td>In-vivo</td><td class="num">849</td><td class="num">135 min</td><td>4 live rabbits, in-vivo logger, energy pedal</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption"><b>Table I. Demonstration corpora used for training.</b> Each episode is one attempt at the appendectomy recorded with the surgical instrument-state logger on the surgeon's hand-held instruments. Duration is the total recorded time after quality filtering.</p>
+
+      <h3 class="title is-4" id="selection">Configuration selection on the ex-vivo corpus</h3>
+      <div class="content has-text-justified">
+        <p><b>Selection criterion.</b> A policy that does nothing never violates the trocar, so violations alone cannot select a configuration; GR00T-H and the frozen backbone score well on it for that reason. The criterion was therefore the full approach without a violation (lift, arrive at the site and close the jaw on tissue), the furthest stage the simulator can score, reached with few violations. On this criterion the DINOv3 configuration with its last transformer block unfrozen was the best of the 31 (81%), ahead of two unfrozen blocks (50%) and of the fully frozen backbone (44%), whose low violation rate comes at the price of never closing the jaw on tissue (grasp depth 0.0 mm). GR00T-H (0%, none of 24 checkpoints closed a jaw on tissue) and ResNet-18 (≤12%) are far behind.</p>
+        <p><b>Backbone.</b> Replacing the two ResNet-18 encoders with a frozen DINOv3 reduced trocar violations from 88% to 6% (Fisher p = 7 × 10<sup>−6</sup>) and raised lift from 12% to 69% (p = 0.003).</p>
+        <p><b>Latency matching.</b> Training the deployed configuration on the same episodes processed <em>without</em> per-channel latency matching leaves trocar violations unchanged (19% vs. 19%) but eliminates successful lifts (19% vs. 81%, p = 0.001), while its validation mean absolute action error (MAE) is <em>better</em> (0.138 vs. 0.148): the 325 ms depth–attitude skew breaks the coordinated insertion that lifting requires, which offline error cannot see.</p>
+        <p><b>Unfreezing.</b> Safety degrades as more transformer blocks are unfrozen (violations 6%, 19%, 19%, 56%, 69% for zero to four blocks), while only unfreezing a single block raises the full-approach rate notably above the frozen backbone (81% vs. 44%).</p>
+        <p><b>Offline error vs. closed-loop safety.</b> That offline validation error does not predict closed-loop success is known from robomimic; in our surgical setting it goes further and is <em>anti</em>-correlated with safety. Across the unfreezing sweep, validation MAE improves monotonically (0.152 to 0.142) while violations rise from 6% to 69%. The least safe encoder, ResNet-18, even has a better MAE (0.145) than the frozen DINOv3 (0.152).</p>
+        <p><b>Run-time phase input and replanning.</b> A phase predictor trained on demonstration video cut the deployed configuration's lift from 81% to 31% and its full approach from 81% to 25%; one trained in the simulator's own domain recovered part of this loss but still halved lift. Committing one action per chunk instead of three raised violations from 19% to 69% and cut the full approach from 81% to 31%.</p>
       </div>
     </div>
-    <div class="cols" style="margin-top:2.5rem">
-      <div class="prose">
-        <p>Because offline error had already failed as a selector, the checkpoint was accepted through pre-registered event-level gates on unseen episodes: every jaw-closing event detected, energy false-fire 0.019 and missed-fire 0.032 against gates of 0.05 and 0.30, and closed-loop gain 0.86/0.82 against a 0.8 gate.</p>
-        <p>Ex-vivo pre-training turned out not to matter. Trained from random initialization and from the ex-vivo weights on 25%, 50% and 100% of the corpus, both initializations passed the same gates in all six runs. Pre-training helped in offline error only while data were scarce (MAE 1.221 vs. 1.413 at 25% of the corpus, 1.157 vs. 1.173 at 100%). A policy for live tissue has to be trained on live-tissue demonstrations, which is the argument for an instrument that can collect them in the operating room.</p>
+
+    <div class="wide">
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr><th>Configuration</th><th class="num">Trocar violation ↓ [95% CI]</th><th class="num">Lift ↑</th><th class="num">Full approach ↑ [95% CI]</th><th class="num">Grasp depth (mm) ↑</th><th class="num">MAE ↓</th></tr>
+          </thead>
+          <tbody>
+            <tr class="group"><td colspan="6">Model</td></tr>
+            <tr><td>GR00T-H (VLA), no phase</td><td class="num">12%<span class="ci">[3–36]</span></td><td class="num">50%</td><td class="num">0%<span class="ci">[0–19]</span></td><td class="num">—</td><td class="num">0.184</td></tr>
+            <tr><td>DP, ResNet-18</td><td class="num">88%<span class="ci">[64–97]</span></td><td class="num">12%</td><td class="num">12%<span class="ci">[3–36]</span></td><td class="num">13.9</td><td class="num">0.145</td></tr>
+            <tr><td>DP, DINOv3 frozen</td><td class="num"><b>6%</b><span class="ci">[1–28]</span></td><td class="num">69%</td><td class="num">44%<span class="ci">[23–67]</span></td><td class="num">0.0</td><td class="num">0.152</td></tr>
+            <tr class="kept"><td>DP, DINOv3, last block unfrozen</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num"><b>81%</b></td><td class="num"><b>81%</b><span class="ci">[57–93]</span></td><td class="num">10.8</td><td class="num">0.148</td></tr>
+            <tr class="group"><td colspan="6">Phase input (fixed: DINOv3, last block unfrozen)</td></tr>
+            <tr class="kept"><td>Manual phase</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num"><b>81%</b></td><td class="num"><b>81%</b><span class="ci">[57–93]</span></td><td class="num">10.8</td><td class="num">0.148</td></tr>
+            <tr><td>TCN (demo video)</td><td class="num">50%<span class="ci">[28–72]</span></td><td class="num">31%</td><td class="num">25%<span class="ci">[10–49]</span></td><td class="num">5.2</td><td class="num">0.148</td></tr>
+            <tr><td>TCN (simulator)</td><td class="num">25%<span class="ci">[10–49]</span></td><td class="num">38%</td><td class="num">38%<span class="ci">[18–61]</span></td><td class="num">10.3</td><td class="num">0.148</td></tr>
+            <tr class="group"><td colspan="6">Unfrozen DINOv3 blocks (fixed: manual phase)</td></tr>
+            <tr><td>None (frozen)</td><td class="num"><b>6%</b><span class="ci">[1–28]</span></td><td class="num">69%</td><td class="num">44%<span class="ci">[23–67]</span></td><td class="num">0.0</td><td class="num">0.152</td></tr>
+            <tr class="kept"><td>Last 1 block</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num"><b>81%</b></td><td class="num"><b>81%</b><span class="ci">[57–93]</span></td><td class="num">10.8</td><td class="num">0.148</td></tr>
+            <tr><td>Last 2 blocks</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num">50%</td><td class="num">50%<span class="ci">[28–72]</span></td><td class="num">10.7</td><td class="num">0.146</td></tr>
+            <tr><td>Last 3 blocks</td><td class="num">56%<span class="ci">[33–77]</span></td><td class="num">38%</td><td class="num">38%<span class="ci">[18–61]</span></td><td class="num">9.3</td><td class="num">0.143</td></tr>
+            <tr><td>Last 4 blocks</td><td class="num">69%<span class="ci">[44–86]</span></td><td class="num">31%</td><td class="num">31%<span class="ci">[14–56]</span></td><td class="num">8.8</td><td class="num">0.142</td></tr>
+            <tr class="group"><td colspan="6">Latency matching (fixed: DINOv3, last block unfrozen, manual phase)</td></tr>
+            <tr class="kept"><td>With</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num"><b>81%</b></td><td class="num"><b>81%</b><span class="ci">[57–93]</span></td><td class="num">10.8</td><td class="num">0.148</td></tr>
+            <tr><td>Without</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num">19%</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num">11.0</td><td class="num">0.138</td></tr>
+            <tr class="group"><td colspan="6">Replanning (fixed: DINOv3, last block unfrozen, manual phase)</td></tr>
+            <tr class="kept"><td>n<sub>exec</sub> = 3</td><td class="num">19%<span class="ci">[7–43]</span></td><td class="num"><b>81%</b></td><td class="num"><b>81%</b><span class="ci">[57–93]</span></td><td class="num">10.8</td><td class="num">0.148</td></tr>
+            <tr><td>n<sub>exec</sub> = 1</td><td class="num">69%<span class="ci">[44–86]</span></td><td class="num">31%</td><td class="num">31%<span class="ci">[14–56]</span></td><td class="num">10.7</td><td class="num">0.148</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption"><b>Table II. Closed-loop simulator results of the ex-vivo configuration ablation.</b> 16 episodes of 15 s per configuration. Lift and Full approach (the selection criterion) count violation-free episodes. Italic rows name the factor varied and the settings already fixed. Shaded rows mark the setting kept. All rows use latency matching and n<sub>exec</sub> = 3 unless varied. DP: diffusion policy.</p>
+
+      <h3 class="title is-5 has-text-centered">Closed-loop simulator rollouts behind Table II</h3>
+      <div class="video-grid">
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-groot.jpg" width="640" height="360" aria-label="Simulator endoscope view, GR00T-H policy"><source src="assets/video/sim-groot.mp4" type="video/mp4"></video><p><b>GR00T-H (VLA), no phase</b><br><span>Violation 12% · Full approach 0%</span></p></div>
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-resnet18.jpg" width="640" height="360" aria-label="Simulator endoscope view, ResNet-18 policy"><source src="assets/video/sim-resnet18.mp4" type="video/mp4"></video><p><b>DP, ResNet-18</b><br><span>Violation 88% · Full approach 12%</span></p></div>
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-dinov3-frozen.jpg" width="640" height="360" aria-label="Simulator endoscope view, frozen DINOv3 policy"><source src="assets/video/sim-dinov3-frozen.mp4" type="video/mp4"></video><p><b>DP, DINOv3 frozen</b><br><span>Violation 6% · Full approach 44%</span></p></div>
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-no-latency.jpg" width="640" height="360" aria-label="Simulator endoscope view, policy trained without latency matching"><source src="assets/video/sim-no-latency.mp4" type="video/mp4"></video><p><b>Without latency matching</b><br><span>Violation 19% · Full approach 19%</span></p></div>
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-4blocks.jpg" width="640" height="360" aria-label="Simulator endoscope view, DINOv3 with four blocks unfrozen"><source src="assets/video/sim-4blocks.mp4" type="video/mp4"></video><p><b>DINOv3, last 4 blocks unfrozen</b><br><span>Violation 69% · Full approach 31%</span></p></div>
+        <div class="cell"><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-sim-deployed.jpg" width="640" height="360" aria-label="Simulator endoscope view, deployed configuration"><source src="assets/video/sim-deployed.mp4" type="video/mp4"></video><p><b>DINOv3, last block unfrozen (deployed)</b><br><span>Violation 19% · Full approach 81%</span></p></div>
+      </div>
+      <p class="table-caption">One episode per configuration from the simulator's endoscope recordings of the Table II evaluations, 10 fps, one frame per policy step. An episode ends early when the trocar constraint is violated.</p>
+    </div>
+
+    <figure class="figure wide">
+      <img src="assets/img/fig6-selection-2400.webp" srcset="assets/img/fig6-selection-1200.webp 1200w, assets/img/fig6-selection-2400.webp 2400w" sizes="(min-width: 1072px) 976px, 100vw" width="2400" height="891" loading="lazy" alt="Three stages: demonstrations collected in a laparoscopic phantom, candidate policies run in the reconstructed simulator, and the selected configuration validated on the real two-FR3 rig">
+      <figcaption><b>Figure 6. Ex-vivo policy selection.</b> Demonstrations recorded with the ex-vivo logger in a laparoscopic phantom (left) train the candidate policy configurations. Every candidate runs closed-loop episodes in a simulator whose organs are reconstructed from the phantom's depth maps (middle). The configuration with the highest full-approach rate without a trocar violation is run on the real two-FR3 rig (right) and becomes the policy configuration retrained for in vivo.</figcaption>
+    </figure>
+
+    <div class="narrow">
+      <div class="content has-text-justified">
+        <p><b>Real ex-vivo rig.</b> The deployed configuration ran on the two-FR3 rig with a rabbit cadaver (15 sessions, about 18 min of policy control): zero trocar violations, peak RCM error 0.23 mm. The phase predictor, however, saturated at the final phase within a median of 10.6 s (rig frames lay outside its training manifold), so in vivo the surgeon set the phase.</p>
+      </div>
+      <div class="media-row">
+        <div><img src="assets/img/photo-exvivo-rig-1600.webp" srcset="assets/img/photo-exvivo-rig-800.webp 800w, assets/img/photo-exvivo-rig-1600.webp 1600w" sizes="(min-width: 848px) 390px, 100vw" width="1600" height="1199" loading="lazy" alt="The two-FR3 ex-vivo rig: a surgeon at the phase keypress, monitors, and two arms holding instruments through a laparoscopic phantom"><p>The two-FR3 ex-vivo rig.</p></div>
+        <div><video class="square" data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-exvivo-rig.jpg" width="720" height="720" aria-label="Endoscope view of the selected policy running on the real two-FR3 rig with a rabbit cadaver"><source src="assets/video/exvivo-rig.mp4" type="video/mp4"></video><p>Endoscope view under policy control on the real rig, rabbit cadaver.</p></div>
+      </div>
+
+      <h3 class="title is-4" id="invivo-training">In-vivo training</h3>
+      <div class="content has-text-justified">
+        <p>The policy was retrained from scratch on the 849 in-vivo demonstrations, with the ex-vivo configuration and optimizer-step budget unchanged. Because offline error had already failed as a selector, the checkpoint was accepted through pre-registered event-level gates on unseen episodes: every jaw-closing event detected, energy false-fire 0.019 and missed-fire 0.032 against gates of 0.05 and 0.30, and closed-loop gain 0.86/0.82 against a 0.8 gate.</p>
+        <p>Ex-vivo pre-training turned out not to matter. Trained from random initialization and from the ex-vivo weights on 25%, 50% and 100% of the corpus, both initializations passed the same gates in all six runs; pre-training helped in offline error only while data were scarce (MAE 1.221 vs. 1.413 at 25% of the corpus, 1.157 vs. 1.173 at 100%). A policy for live tissue has to be trained on live-tissue demonstrations, which is the argument for an instrument that can collect them in the operating room.</p>
+      </div>
+
+      <h3 class="title is-4" id="deployment">Deployment on live rabbits</h3>
+      <div class="two-up">
+        <div><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-invivo-collection.jpg" width="1280" height="720" aria-label="A surgeon collects demonstrations on a live rabbit with instruments carrying the in-vivo logger"><source src="assets/video/invivo-collection.mp4" type="video/mp4"></video><p>In-vivo demonstration collection, 30 August 2026.</p></div>
+        <div><video data-loop muted loop playsinline preload="metadata" poster="assets/img/poster-invivo-rollout.jpg" width="1092" height="816" aria-label="Two FR3 arms execute the policy on a live rabbit while the surgeon supervises"><source src="assets/video/invivo-rollout.mp4" type="video/mp4"></video><p>Policy deployment on a different animal, 4 September 2026.</p></div>
+      </div>
+      <div class="content has-text-justified">
         <p>On a single day the policy ran on four live rabbits at 5 Hz with electrosurgery armed. Inference on one RTX 4090 took a median 23.5 ms per step (95th percentile 59.7 ms), well inside the 200 ms control period. In each animal the surgeon placed the instruments, checked the hand-over state against the demonstration band, handed control to the policy, supplied the phase by keypress, and could take control back at any moment.</p>
         <p>In three of the four animals a single rollout carried the instruments from grasp approach to the energized cut without the surgeon touching them. In the fourth the left arm was handed over in a poorly conditioned inverse-kinematics branch and the joint-limit governor aborted before the policy could act; the procedure was completed by hand. All four animals survived, with no gross abnormality during a week of observation.</p>
-        <h3>Safety</h3>
-        <p>Across all policy-controlled time that day the RCM error never exceeded 0.84 mm against a 5 mm abort threshold, and every sample that did exceed the threshold in the day's logs occurred under human teleoperation. In every sample of cautery under policy control, 108 samples at 10 Hz, the cutting jaw was closed, with aperture at most 0.7%.</p>
+        <p><b>Safety.</b> Across all policy-controlled time that day the RCM error never exceeded 0.84 mm against a 5 mm abort threshold, and every sample that did exceed the threshold in the day's logs occurred under human teleoperation. In every sample of cautery under policy control (108 samples at 10 Hz) the cutting jaw was closed, with aperture at most 0.7%.</p>
       </div>
-      <aside class="aside">
-        <div class="note"><b>Acceptance gates, pre-registered.</b> Every jaw-closing event detected. Energy false-fire 0.019 against a gate of 0.05. Missed-fire 0.032 against 0.30. Closed-loop gain 0.86 and 0.82 for the two arms against 0.8. Scored on unseen episodes before any animal was touched.</div>
-        <div class="note note--energy"><b>Under policy control.</b> 108 cautery samples at 10 Hz, cutting jaw closed in every one, aperture at most 0.7%. Peak RCM error 0.84 mm against a 5 mm abort threshold.</div>
-      </aside>
+      <div class="table-container">
+        <table class="table">
+          <thead><tr><th></th><th class="num">Rabbit 1</th><th class="num">Rabbit 2</th><th class="num">Rabbit 3</th><th class="num">Rabbit 4</th></tr></thead>
+          <tbody>
+            <tr><td>Appendectomy completed</td><td class="num yes">yes</td><td class="num yes">yes</td><td class="num yes">yes</td><td class="num no">no‡</td></tr>
+            <tr><td>Policy control time (s)</td><td class="num">34.2</td><td class="num">16.8</td><td class="num">14.7</td><td class="num">—</td></tr>
+            <tr><td>Cautery fired by policy (s)</td><td class="num">4.6</td><td class="num">3.0</td><td class="num">3.2</td><td class="num">—</td></tr>
+            <tr><td>Peak RCM error (mm)</td><td class="num">0.20</td><td class="num">0.21</td><td class="num">0.84</td><td class="num">—</td></tr>
+            <tr><td>Hand-over channels in demo band</td><td class="num">6/6</td><td class="num">4/6</td><td class="num">4/6</td><td class="num">—</td></tr>
+            <tr><td>Post-operative survival (days)</td><td class="num">7/7</td><td class="num">7/7</td><td class="num">7/7</td><td class="num">7/7</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-caption"><b>Table III. Deployment results on four live rabbits.</b> The policy performed one rollout in each animal, and every value is taken from that rollout's log. ‡ Aborted at hand-over by the joint-limit governor (controller, not policy). Completed by hand.</p>
     </div>
-    <div class="tbl reveal">
-          <table>
-            <thead><tr><th></th><th class="n">Rabbit 1</th><th class="n">Rabbit 2</th><th class="n">Rabbit 3</th><th class="n">Rabbit 4</th></tr></thead>
-            <tbody>
-              <tr><td>Appendectomy completed</td><td class="n yes">yes</td><td class="n yes">yes</td><td class="n yes">yes</td><td class="n no">no‡</td></tr>
-              <tr><td>Policy control time (s)</td><td class="n">34.2</td><td class="n">16.8</td><td class="n">14.7</td><td class="n">—</td></tr>
-              <tr><td>Cautery fired by policy (s)</td><td class="n">4.6</td><td class="n">3.0</td><td class="n">3.2</td><td class="n">—</td></tr>
-              <tr><td>Peak RCM error (mm)</td><td class="n">0.20</td><td class="n">0.21</td><td class="n">0.84</td><td class="n">—</td></tr>
-              <tr><td>Hand-over channels in demo band</td><td class="n">6/6</td><td class="n">4/6</td><td class="n">4/6</td><td class="n">—</td></tr>
-              <tr><td>Post-operative survival (days)</td><td class="n">7/7</td><td class="n">7/7</td><td class="n">7/7</td><td class="n">7/7</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="tbl-cap"><b>Table III</b> Deployment results on four live rabbits. One rollout per animal; every value is from that rollout's log. ‡ Aborted at hand-over by the joint-limit governor (controller, not policy). Completed by hand.</p>
-
-    <figure class="fig fig--wide reveal">
-      <div class="media"><img src="assets/img/fig7-invivo-2400.webp" srcset="assets/img/fig7-invivo-1200.webp 1200w, assets/img/fig7-invivo-2400.webp 2400w" sizes="(min-width: 1400px) 1320px, 100vw" width="2400" height="1001" loading="lazy" decoding="async" alt="In-vivo demonstration collection, deployment with two FR3 arms, and a strip of endoscope frames from rabbit 1's rollout ending in the energized cut"></div>
-      <figcaption><b>Fig. 7</b> In-vivo demonstration collection and deployment. (a) The surgeon operates on a live rabbit with instruments carrying the in-vivo logger. (b) Deployment on a different animal: two FR3 arms hold the grasper and dissector through trocars in the anesthetized rabbit with the electrosurgical unit connected. The surgeon supervises at the console. (c) Frames from rabbit 1's 34 s policy rollout: grasper approach, lift, dissector approach, jaws closing on tissue, and the energized cut (orange frames, 24 to 29 s).</figcaption>
+    <figure class="figure wide">
+      <img src="assets/img/fig7-invivo-2400.webp" srcset="assets/img/fig7-invivo-1200.webp 1200w, assets/img/fig7-invivo-2400.webp 2400w" sizes="(min-width: 1072px) 976px, 100vw" width="2400" height="1001" loading="lazy" alt="In-vivo demonstration collection, deployment with two FR3 arms, and a strip of endoscope frames from rabbit 1's rollout ending in the energized cut">
+      <figcaption><b>Figure 7. In-vivo demonstration collection and deployment.</b> (a) In-vivo demonstration collection: the surgeon operates on a live rabbit with instruments carrying the in-vivo logger. (b) Deployment on a different animal: two FR3 arms hold the grasper and dissector through trocars in the anesthetized rabbit with the electrosurgical unit connected. The surgeon supervises at the console. (c) Frames from rabbit 1's 34 s policy rollout: grasper approach, lift, dissector approach, jaws closing on tissue, and the energized cut (orange frames, 24 to 29 s).</figcaption>
     </figure>
   </div>
 </section>
 
-<section class="section" id="limits">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Discussion</b> · Paper §V</div>
-      <h2>What this does not claim</h2>
-    </div>
-    <div class="prose">
-      <p><strong>Not full autonomy.</strong> The surgeon selected the phase, because the vision-based phase predictor agreed with the surgeon on only 24.6% of policy control steps under the deployment endoscope, a domain shift familiar from phase recognition across hospitals.</p>
-      <p><strong>Not a robot-free pipeline.</strong> An FR3 is the ground truth for the latency measurement and the ex-vivo test rig, though it collected no training demonstrations.</p>
-      <p><strong>A small in-vivo study.</strong> Four demonstration animals and one deployment in each of four others, on a single day. Eight live rabbits were used in total. All animal procedures were approved by the BIOSTEP Institutional Animal Care and Use Committee (IACUC S26-BZ-0562).</p>
+<section class="section" id="discussion">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Discussion and limitations</h2>
+      <div class="content has-text-justified">
+        <p>A shaft-mounted surgical instrument-state logger with per-channel latency matching turned hand-held laparoscopic demonstrations into a bimanual policy that was selected in simulation, validated on a real rig and executed electrosurgery in live animals. Per-channel latency matching halved the dynamic depth error against the FR3 ground truth (2.69 to 1.36 mm) and raised lift in closed loop from 19% to 81% of episodes. Closed-loop rollouts of 31 candidate configurations identified the policy design: a frozen DINOv3 backbone reduced trocar violations from 88% to 6% relative to ResNet-18, unfreezing its last block gave the highest full-approach rate (81%), validation error improved as safety degraded, and the selected configuration ran on the real rig without a trocar violation. Retrained on 849 in-vivo demonstrations, the configuration completed the appendectomy in three of four live rabbits under shared autonomy, with the cutting jaw closed at every cautery sample and a peak RCM error of 0.84 mm.</p>
+        <p>This study has two limitations. First, the surgeon supplied the phase in vivo, because the vision-based phase predictor agreed with the surgeon on only 24.6% of policy control steps under the deployment endoscope, a domain shift known from phase recognition across hospitals. Second, due to the complexity of experiments on live animals, the in-vivo study was limited to demonstrations from four rabbits and one deployment in each of four others on a single day.</p>
+        <p>Eight live rabbits were used in total, four for demonstrations and four for deployment. All animal procedures involving rabbits were approved by the BIOSTEP Institutional Animal Care and Use Committee (IACUC S26-BZ-0562).</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="data">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Data release</b></div>
-      <h2>Both demonstration corpora are public</h2>
-      <p class="lede">Released in their recorded form, not as derived training arrays. Every stream carries absolute host timestamps so the per-channel latency matching can be reproduced or replaced.</p>
-    </div>
-    <div class="cards">
-      <div class="card reveal">
-        <div class="k">Ex-vivo · logger + endoscope</div>
-        <div class="v">≈ 61 GB</div>
-        <p>585 episodes recorded on 12 July 2026, 533 used for training. Logger H5 per arm, 4K 60 fps endoscope clips, overhead camera, force channels, hand-corrected phase labels.</p>
-        <div class="links"><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo">Hugging Face</a></div>
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Data release</h2>
+      <div class="content has-text-justified">
+        <p>Both training corpora are released in their recorded form, not as derived training arrays. Every stream carries absolute host timestamps (Unix epoch, UTC) so that the per-channel latency matching of the paper can be reproduced or replaced. File layouts, channel definitions, label vocabularies and known issues are documented in the <a href="https://github.com/Rosota-Research/ICRA2027-Invivo-main">data repository README</a>.</p>
       </div>
-      <div class="card reveal">
-        <div class="k">Ex-vivo · RealSense D405</div>
-        <div class="v">≈ 487 GB</div>
-        <p>ROS 2 bags of the RGB-D camera above the phantom, the source of the simulator's organ geometry. Not needed to reproduce any result in the paper.</p>
-        <div class="links"><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo-d405-part1">Part 1</a><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo-d405-part2">Part 2</a></div>
-      </div>
-      <div class="card reveal">
-        <div class="k">In-vivo · preprocessed episodes</div>
-        <div class="v">≈ 46 GB</div>
-        <p>868 episode folders from four live rabbits recorded on 30 August 2026, 849 used for training. Endoscope video with per-frame timestamps, two logger files, pedal state and phase labels per episode.</p>
-        <div class="links"><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-invivo">Hugging Face</a></div>
-      </div>
-      <div class="card reveal">
-        <div class="k">Documentation</div>
-        <div class="v">README</div>
-        <p>File layouts, channel definitions, label vocabularies and the known issues of each corpus.</p>
-        <div class="links"><a href="https://github.com/Rosota-Research/ICRA2027-Invivo-main">github.com/Rosota-Research/ICRA2027-Invivo-main</a></div>
+      <div class="table-container">
+        <table class="table">
+          <thead><tr><th>Corpus</th><th>Content</th><th class="num">Size</th><th>Link</th></tr></thead>
+          <tbody>
+            <tr><td>Ex-vivo, logger + endoscope</td><td>Logger H5 per arm, 4K 60 fps endoscope clips, overhead camera, force channels, hand-corrected phase labels (585 episodes recorded, 533 used)</td><td class="num">≈ 61 GB</td><td><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo">Hugging Face</a></td></tr>
+            <tr><td>Ex-vivo, RealSense D405</td><td>ROS 2 bags used for the simulator reconstruction; not needed to reproduce any result in the paper</td><td class="num">≈ 487 GB</td><td><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo-d405-part1">part 1</a> · <a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-exvivo-d405-part2">part 2</a></td></tr>
+            <tr><td>In-vivo, preprocessed episodes</td><td>868 episode folders: endoscope video with per-frame timestamps, two logger files, pedal state and phase labels (849 used)</td><td class="num">≈ 46 GB</td><td><a href="https://huggingface.co/datasets/surgicalrobotics/appendectomy-invivo">Hugging Face</a></td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
 </section>
 
 <section class="section" id="related">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Companion papers</b></div>
-      <h2>From the same group</h2>
-    </div>
-    <div class="related">
-      <a class="card reveal" href="https://arxiv.org/abs/2609.25642">
-        <div class="k">arXiv:2609.25642 · the simulator</div>
-        <div class="t">Contact-Stable Deformable Tissue Simulation Using Implicit Integration and Live-Pose Grasp Constraints for Laparoscopic Surgery Robot Policy Evaluation</div>
-        <p>The closed-loop screening environment used to select the configuration: tissue reconstructed from a single RGB-D recording, two FR3 arms through 6 mm trocars, implicit integration and a grasp constraint captured at the live tissue pose.</p>
-      </a>
-      <a class="card reveal" href="https://arxiv.org/abs/2609.25577">
-        <div class="k">arXiv:2609.25577 · the logger</div>
-        <div class="t">Recording Hand-Held Laparoscopic Instrument Motion in the Operating Room: Magnetometer-Free Fusion of Inertial, Range and Visual Sensing</div>
-        <p>A clip-on logger fusing a six-axis IMU and a time-of-flight rangefinder with a markerless camera in an error-state Kalman filter under the trocar's remote centre of motion.</p>
-      </a>
-      <a class="card reveal" href="https://www.rosota.ai">
-        <div class="k">rosota.ai · research notes</div>
-        <div class="t">Rosota Intelligence Institute</div>
-        <p>Research notes, videos and product pages from the group behind this work, including the SurgiLogger instrument-state logger.</p>
-      </a>
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3 has-text-centered">Companion papers from our group</h2>
+      <ul class="linklist">
+        <li><a class="t" href="https://arxiv.org/abs/2609.25642">Contact-Stable Deformable Tissue Simulation Using Implicit Integration and Live-Pose Grasp Constraints for Laparoscopic Surgery Robot Policy Evaluation</a><div class="d">The closed-loop screening environment used to select the configuration. arXiv:2609.25642.</div></li>
+        <li><a class="t" href="https://arxiv.org/abs/2609.25577">Recording Hand-Held Laparoscopic Instrument Motion in the Operating Room: Magnetometer-Free Fusion of Inertial, Range and Visual Sensing</a><div class="d">A clip-on logger fusing a six-axis IMU and a time-of-flight rangefinder with a markerless camera under the trocar's remote centre of motion. arXiv:2609.25577.</div></li>
+        <li><a class="t" href="https://www.rosota.ai">Rosota Intelligence Institute</a><div class="d">Research notes and videos from the group behind this work, including the SurgiLogger instrument-state logger.</div></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="section" id="cite">
-  <div class="wrap">
-    <div class="section-head">
-      <div class="eyebrow"><b>Citation</b></div>
-      <h2>BibTeX</h2>
-    </div>
-    <div class="bib">
-      <button class="copy" id="copy-bib" type="button">Copy</button>
-<pre id="bibtex">@article{yee2026instrument,
+<section class="section" id="bibtex">
+  <div class="container">
+    <div class="narrow">
+      <h2 class="title is-3">BibTeX</h2>
+<pre class="bibtex">@article{yee2026instrument,
   title   = {From Instrument-Mounted Demonstrations to In-Vivo Execution: Learning Bimanual
              Laparoscopic Appendectomy Without Robot-Collected Demonstrations},
-  author  = {Yee, Dongho and Oh, Juahn and Lee, Jinseok and Lee, Jiyul and Seo, Yechan and
-             Jeong, Seong and Kim, Minsung and Shim, Seonho and Noh, Younghoon and Choi, Hyuk and
-             Kong, Youngbin and Lee, Kyu Eun and Kong, Hyoun-Joong},
+  author  = {Yee, Dongho and Oh, Juahn and Lee, Jinseok and Lee, Jiyul and
+             Seo, Yechan and Jeong, Seong and Kim, Minsung and Shim, Seonho and
+             Noh, Younghoon and Choi, Hyuk and Kong, Youngbin and Lee, Kyu Eun and
+             Kong, Hyoun-Joong},
   journal = {arXiv preprint arXiv:2609.25625},
   year    = {2026},
   url     = {https://arxiv.org/abs/2609.25625}
@@ -640,43 +476,18 @@
     </div>
   </div>
 </section>
-</main>
 
 <footer class="footer">
-  <div class="wrap">
-    <div class="grid">
-      <div>
-        <h4>Rosota Intelligence Institute</h4>
-        <p>Surgical robot learning from the surgeon's own instruments. Rosota Inc. and Seoul National University Hospital, Seoul, Republic of Korea.</p>
-      </div>
-      <div>
-        <h4>Follow</h4>
-        <ul>
-          <li><a href="https://www.rosota.ai">rosota.ai</a></li>
-          <li><a href="https://github.com/Rosota-Research">GitHub · Rosota-Research</a></li>
-          <li><a href="https://huggingface.co/surgicalrobotics">Hugging Face · surgicalrobotics</a></li>
-          <li><a href="https://arxiv.org/a/yee_d_1">arXiv · Dongho Yee</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>This paper</h4>
-        <ul>
-          <li><a href="https://arxiv.org/abs/2609.25625">arXiv:2609.25625</a></li>
-          <li><a href="https://arxiv.org/pdf/2609.25625">PDF</a></li>
-          <li><a href="#video">Supplementary video</a></li>
-          <li><a href="https://github.com/Rosota-Research/ICRA2027-Invivo-main">Data release</a></li>
-          <li><a href="https://www.rosota.ai/posts/instrument-mounted-demonstrations-in-vivo">Research note on rosota.ai</a></li>
-        </ul>
-      </div>
+  <div class="container has-text-centered">
+    <div class="logos">
+      <a href="https://www.rosota.ai" title="Rosota"><img src="assets/img/logo-rosota.webp" alt="Rosota" width="833" height="232" loading="lazy"></a>
+      <a href="https://www.snuh.org" title="Seoul National University Hospital, Department of Transdisciplinary Medicine"><img src="assets/img/logo-snuh-dtm.webp" alt="Seoul National University Hospital, Department of Transdisciplinary Medicine" width="505" height="127" loading="lazy"></a>
     </div>
-    <p class="fine">Preprint submitted to the IEEE International Conference on Robotics and Automation 2027. This work has been submitted to the IEEE for possible publication; copyright may be transferred without notice. Animal procedures were approved by the BIOSTEP Institutional Animal Care and Use Committee (IACUC S26-BZ-0562). Page source: <a href="https://github.com/Rosota-Research/instrument-mounted-demonstrations-in-vivo">github.com/Rosota-Research/instrument-mounted-demonstrations-in-vivo</a>.</p>
+    <p class="links"><a href="https://arxiv.org/abs/2609.25625">arXiv</a><a href="https://arxiv.org/pdf/2609.25625">PDF</a><a href="https://github.com/Rosota-Research/ICRA2027-Invivo-main">Data</a><a href="https://huggingface.co/surgicalrobotics">Hugging Face</a><a href="https://www.rosota.ai">rosota.ai</a><a href="https://github.com/Rosota-Research">GitHub</a></p>
+    <p>Rosota Intelligence Institute and Seoul National University Hospital, Seoul, Republic of Korea.</p>
+    <p>This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice. Page source on <a href="https://github.com/Rosota-Research/instrument-mounted-demonstrations-in-vivo">GitHub</a>.</p>
   </div>
 </footer>
-
-<dialog class="lightbox" id="lightbox" aria-label="Enlarged figure">
-  <img src="" alt="">
-  <p></p>
-</dialog>
 
 <script src="assets/js/main.js" defer></script>
 </body>

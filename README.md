@@ -24,9 +24,10 @@ The static project page served by GitHub Pages. No build step; `index.html`, `as
 @article{yee2026instrument,
   title   = {From Instrument-Mounted Demonstrations to In-Vivo Execution: Learning Bimanual
              Laparoscopic Appendectomy Without Robot-Collected Demonstrations},
-  author  = {Yee, Dongho and Oh, Juahn and Lee, Jinseok and Lee, Jiyul and Seo, Yechan and
-             Jeong, Seong and Kim, Minsung and Shim, Seonho and Noh, Younghoon and Choi, Hyuk and
-             Kong, Youngbin and Lee, Kyu Eun and Kong, Hyoun-Joong},
+  author  = {Yee, Dongho and Oh, Juahn and Lee, Jinseok and Lee, Jiyul and
+             Seo, Yechan and Jeong, Seong and Kim, Minsung and Shim, Seonho and
+             Noh, Younghoon and Choi, Hyuk and Kong, Youngbin and Lee, Kyu Eun and
+             Kong, Hyoun-Joong},
   journal = {arXiv preprint arXiv:2609.25625},
   year    = {2026},
   url     = {https://arxiv.org/abs/2609.25625}
